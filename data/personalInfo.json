@@ -1,34 +1,37 @@
 {
-  "name": "John Doe",
+  "name": "Kshitiz Tiwari",
   "domain": "github.com",
-  "email": "test@brown.edu",
-  "work_place": "Brown University",
-  "work_place_url": "https://www.example.com",
-  "site_description": "This is a personal website",
+  "email": "ktiwar@uark.edu",
+  "work_place": "University of Arkansas",
+  "work_place_url": "https://www.uark.edu",
+  "site_description": "Personal website of Kshitiz Tiwari — PhD researcher in Large Language Models, NLP, and Causal AI.",
   "greetings_on_homepage": "Welcome!",
-  "self_description_brief": "PhD Student in Computational Biology",
+  "self_description_brief": "PhD Student in Computer Science working on Large Language Models, Causal NLP, and Robust AI",
   "self_description_detail": [
-    "Hello! I’m John Doe, a passionate and dedicated PhD student specializing in Computational Biology at Brown University. My research focuses on leveraging advanced machine learning techniques to uncover hidden patterns in biological data, with the ultimate goal of contributing to significant advancements in the field of personalized medicine.",
-    "Throughout my academic journey, I have developed a strong foundation in bioinformatics, data science, and computational algorithms. My work often involves the integration of large-scale genomic datasets with cutting-edge computational methods to address complex biological questions. I am particularly interested in the development of novel computational tools that can enhance our understanding of genetic diseases and improve diagnostic and therapeutic strategies.",
-    "I have had the privilege of collaborating with leading researchers and institutions, presenting my findings at numerous international conferences, and publishing in prestigious scientific journals. These experiences have not only honed my technical skills but also fueled my enthusiasm for interdisciplinary collaboration and innovative problem-solving.",
-    "Beyond my academic pursuits, I am an avid coder, always exploring new programming languages and tools to enhance my research capabilities. I am also passionate about teaching and mentoring, regularly engaging with undergraduate students to inspire the next generation of scientists.",
-    "In my free time, I enjoy hiking, reading science fiction novels, and volunteering at local STEM outreach programs. I am always eager to connect with fellow researchers, industry professionals, and anyone who shares my passion for science and technology.",
-    "Thank you for visiting my portfolio. I look forward to the possibility of collaborating and contributing to exciting projects that push the boundaries of our scientific knowledge.",
-    "Feel free to customize this description to better fit your specific experiences, achievements, and personal style."
+    "Hello! I’m Kshitiz Tiwari, a PhD student in Computer Science at the University of Arkansas specializing in Natural Language Processing, Large Language Models, and Causal Inference. My research focuses on making language models more controllable, robust, and interpretable.",
+    "My work explores how causal reasoning and structured representation learning can improve modern generative models. In particular, I study counterfactual text generation — developing methods that allow language models to modify specific attributes such as style, sentiment, or tone while preserving the underlying semantic meaning.",
+    "I have published research on robust NLP systems and adversarial resilience, including work presented at AACL-IJCNLP and in the Entropy journal. My recent work investigates geometric and representation-level approaches for controllable language generation and interpretable model behavior.",
+    "Alongside my research, I enjoy building large-scale datasets and systems. I am currently developing Nepali language resources, including large news corpora and retrieval-augmented generation systems aimed at supporting AI development for underrepresented languages.",
+    "My work sits at the intersection of research and engineering — training and evaluating large models, designing scalable data pipelines, and building tools that translate theoretical ideas into practical systems.",
+    "Outside research, I enjoy exploring new technologies, building experimental side projects, reading science fiction, and thinking about how AI systems can be designed to be more transparent and responsible.",
+    "If you are interested in collaborating, discussing research ideas, or building impactful AI systems, feel free to reach out."
   ],
   "cv_link": "/cv.pdf",
   "research_interests": [
-    "Machine Learning",
-    "Deep Learning",
-    "Computer Vision"
+    "Large Language Models",
+    "Natural Language Processing",
+    "Causal Inference in Machine Learning",
+    "Controllable Text Generation",
+    "Robust and Fair AI",
+    "Representation Learning"
   ],
   "social_media": {
-    "linkedin": "Linkedin URL",
-    "github": "Github URL",
-    "X": "X URL",
-    "instagram": "Instagram URL",
-    "facebook": "Facebook URL",
-    "google_scholar": "Google Scholar URL",
-    "orcid": "ORCID URL"
+    "linkedin": "https://www.linkedin.com/in/zthsk/",
+    "github": "https://github.com/zthsk",
+    "X": "",
+    "instagram": "",
+    "facebook": "",
+    "google_scholar": "https://scholar.google.com/citations?user=hEqZ5SIAAAAJ",
+    "orcid": ""
   }
 }
