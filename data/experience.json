@@ -5,12 +5,12 @@
       "title": "Graduate Research Assistant",
       "company": "University of Arkansas",
       "location": "Fayetteville, AR, USA",
-      "project_name": "Controllable and Robust Language Models",
+      "project_name": "Fair and Robust Language Models",
       "instructor": "Prof. Lu Zhang",
       "start_date": "08/2021",
       "end_date": "Present",
       "description": [
-        "Conduct research on controllable text generation using large language models and causal inference",
+        "Conduct research on fair and robust language models using large language models and causal inference",
         "Develop methods for counterfactual text generation and style transfer using LoRA, contrastive learning, and representation-level constraints",
         "Design evaluation frameworks using LLM-as-a-judge and embedding-based semantic metrics",
         "Publish research on robust NLP models and adversarial detection in venues such as AACL-IJCNLP and Entropy"
