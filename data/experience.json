@@ -1,0 +1,113 @@
+{
+  "job": [
+    {
+      "id": 1,
+      "title": "Software Engineer Intern",
+      "company": "Meta",
+      "location": "Menlo Park, CA",
+      "project_name": "",
+      "instructor": "",
+      "start_date": "06/2023",
+      "end_date": "09/2023",
+      "description": [
+        "Developed new features for the Meta app using React Native and TypeScript",
+        "Collaborated with cross-functional teams to improve app performance and user experience",
+        "Conducted code reviews and provided feedback to team members"
+      ],
+      "href": ""
+    },
+    {
+      "id": 2,
+      "title": "Research Assistant",
+      "company": "Brown University & Department of Health of Rhode Island",
+      "location": "Providence, RI",
+      "project_name": "Deep Learning for Genomics and Precision Medicine",
+      "instructor": "Prof. Jane Smith",
+      "start_date": "09/2022",
+      "end_date": "05/2023",
+      "description": [
+        "Designed and implemented deep learning models for analyzing genomic data",
+        "Published research papers in top-tier conferences and journals",
+        "Presented findings at international conferences and workshops"
+      ],
+      "href": "https://www.example.com"
+    },
+    {
+      "id": 3,
+      "title": "Research Assistant",
+      "company": "Some University",
+      "location": "City, State",
+      "project_name": "Project Name",
+      "instructor": "",
+      "start_date": "09/2012",
+      "end_date": "05/2013",
+      "description": [],
+      "href": ""
+    }
+  ],
+  "extracurricular": [
+    {
+      "id": 1,
+      "title": "Extracurricular Activity",
+      "company": "Company Name",
+      "location": "City, State",
+      "project_name": "Project Name",
+      "instructor": "",
+      "start_date": "Month Year",
+      "end_date": "Month Year",
+      "description": [
+        "Description of the activity",
+        "Description of the activity",
+        "Description of the activity"
+      ],
+      "href": ""
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "school": "Brown University",
+      "degree": "M.S. in Computational Biology",
+      "status": "In Progress",
+      "start_date": "09/2023",
+      "end_date": "05/2025",
+      "gpa": "3.5 / 4.0",
+      "courses": [
+        "Data Structures",
+        "Algorithms",
+        "Machine Learning",
+        "Computer Vision",
+        "Data Structures",
+        "Algorithms",
+        "Machine Learning",
+        "Computer Vision",
+        "Data Structures",
+        "Algorithms",
+        "Machine Learning",
+        "Computer Vision"
+      ],
+      "other_info": [],
+      "href": "https://www.example.com"
+    },
+    {
+      "id": 2,
+      "school": "Brown University",
+      "degree": "B.A. in Computational Biology",
+      "status": "Graduated",
+      "start_date": "09/2019",
+      "end_date": "05/2023",
+      "gpa": "3.5 / 4.0",
+      "courses": [
+        "Data Structures",
+        "Algorithms",
+        "Machine Learning",
+        "Computer Vision"
+      ],
+      "other_info": [
+        "Graduated with Honors",
+        "Dean's List"
+      ],
+      "href": ""
+    }
+  ]
+}
