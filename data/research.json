@@ -48,7 +48,9 @@
         "Minimum Description Length",
         "Robust Machine Learning",
         "Information Theory",
-        "Language Models"
+        "Large Language Models",
+        "Causal Inference",
+        "Causal NLP"
       ],
       "href": {
         "Github": "https://github.com/zthsk/MDL-MLM",
@@ -73,8 +75,10 @@
       ],
       "keywords": [
         "Robust NLP",
+        "Large Language Models",
         "Hate Speech Detection",
         "Causal Inference",
+        "Causal NLP",
         "Adversarial Robustness",
         "Text Classification"
       ],
