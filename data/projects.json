@@ -9,10 +9,6 @@
         "Articles are chunked and embedded into a vector database to enable semantic search and retrieval over Nepali news content, supporting downstream applications such as question answering, narrative comparison across media outlets, and research on Nepali-language NLP."
       ],
       "image": "/images/nepali_rag.png",
-      "href": {
-        "Github": "",
-        "Demo": ""
-      }
     },
 
     {
@@ -25,8 +21,7 @@
       ],
       "image": "/images/llm_resume_screening.png",
       "href": {
-        "Github": "https://github.com/zthsk/semantic-resume-screening",
-        "Demo": ""
+        "Github": "https://github.com/zthsk/semantic-resume-screening"
       }
     },
 
@@ -39,9 +34,6 @@
         "LLM prompting was used to enhance alignment between visual and textual signals, enabling improved classification performance on multimodal hate meme datasets."
       ],
       "image": "/images/multimodal_hate_meme.png",
-      "href": {
-        "Github": ""
-      }
     },
 
     {
