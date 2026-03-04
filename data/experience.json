@@ -52,9 +52,11 @@
       "courses": [
         "Machine Learning",
         "Deep Learning",
-        "Natural Language Processing",
-        "Statistical Learning",
-        "Advanced Algorithms"
+        "Computer Vision",
+        "Information Retrieval",
+        "Data Mining",
+        "Algorithms",
+        "AI Ethics"
       ],
       "other_info": [
         "Research focus: Large Language Models, Generative AI, Robust NLP, Causal Inference"
@@ -72,8 +74,11 @@
       "courses": [
         "Machine Learning",
         "Deep Learning",
-        "Natural Language Processing",
-        "Data Mining"
+        "Computer Vision",
+        "Advanced Information Retrieval",
+        "Data Mining",
+        "Algorithms",
+        "AI Ethics"
       ],
       "other_info": [],
       "href": "https://www.uark.edu"
@@ -92,7 +97,9 @@
         "Database Management Systems",
         "Operating Systems",
         "Computer Networks",
-        "Software Engineering"
+        "Software Engineering",
+        "Image Processing",
+        "Computer Graphics"
       ],
       "other_info": [],
       "href": "https://tribhuvan-university.edu.np"
