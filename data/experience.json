@@ -2,112 +2,118 @@
   "job": [
     {
       "id": 1,
-      "title": "Software Engineer Intern",
-      "company": "Meta",
-      "location": "Menlo Park, CA",
-      "project_name": "",
-      "instructor": "",
-      "start_date": "06/2023",
-      "end_date": "09/2023",
+      "title": "Graduate Research Assistant",
+      "company": "University of Arkansas",
+      "location": "Fayetteville, AR, USA",
+      "project_name": "Controllable and Robust Language Models",
+      "instructor": "Prof. Lu Zhang",
+      "start_date": "08/2021",
+      "end_date": "Present",
       "description": [
-        "Developed new features for the Meta app using React Native and TypeScript",
-        "Collaborated with cross-functional teams to improve app performance and user experience",
-        "Conducted code reviews and provided feedback to team members"
+        "Conduct research on controllable text generation using large language models and causal inference",
+        "Develop methods for counterfactual text generation and style transfer using LoRA, contrastive learning, and representation-level constraints",
+        "Design evaluation frameworks using LLM-as-a-judge and embedding-based semantic metrics",
+        "Publish research on robust NLP models and adversarial detection in venues such as AACL-IJCNLP and Entropy"
       ],
       "href": ""
     },
     {
       "id": 2,
-      "title": "Research Assistant",
-      "company": "Brown University & Department of Health of Rhode Island",
-      "location": "Providence, RI",
-      "project_name": "Deep Learning for Genomics and Precision Medicine",
-      "instructor": "Prof. Jane Smith",
-      "start_date": "09/2022",
-      "end_date": "05/2023",
-      "description": [
-        "Designed and implemented deep learning models for analyzing genomic data",
-        "Published research papers in top-tier conferences and journals",
-        "Presented findings at international conferences and workshops"
-      ],
-      "href": "https://www.example.com"
-    },
-    {
-      "id": 3,
-      "title": "Research Assistant",
-      "company": "Some University",
-      "location": "City, State",
-      "project_name": "Project Name",
+      "title": "Graduate Teaching Assistant",
+      "company": "University of Arkansas",
+      "location": "Fayetteville, AR, USA",
+      "project_name": "Computer Science Courses",
       "instructor": "",
-      "start_date": "09/2012",
-      "end_date": "05/2013",
-      "description": [],
-      "href": ""
-    }
-  ],
-  "extracurricular": [
-    {
-      "id": 1,
-      "title": "Extracurricular Activity",
-      "company": "Company Name",
-      "location": "City, State",
-      "project_name": "Project Name",
-      "instructor": "",
-      "start_date": "Month Year",
-      "end_date": "Month Year",
+      "start_date": "08/2021",
+      "end_date": "Present",
       "description": [
-        "Description of the activity",
-        "Description of the activity",
-        "Description of the activity"
+        "Assist in teaching undergraduate computer science courses including machine learning and data structures",
+        "Lead lab sessions and mentor students on programming assignments and research projects",
+        "Evaluate assignments and support course logistics for large classes"
       ],
       "href": ""
     }
   ],
+
+ "extracurricular": [
+  {
+    "id": 1,
+    "title": "President",
+    "company": "Nepalese Student Association (NeSA)",
+    "location": "University of Arkansas, Fayetteville, AR, USA",
+    "project_name": "Community and Cultural Events",
+    "instructor": "",
+    "start_date": "08/2024",
+    "end_date": "05/2025",
+    "description": [
+      "Served as President of the Nepalese Student Association (NeSA) for the 2024–2025 academic year",
+      "Organized major cultural and community events including Nepali New Year Night, Nepali Game Night, and Deusi Bhailo celebration",
+      "Managed organizational funds, budgeting, and financial planning for student events",
+      "Coordinated with university administration and local Nepalese community organizations",
+      "Led event planning, logistics, volunteer coordination, and community outreach"
+    ],
+    "href": ""
+  }
+],
+
   "education": [
     {
       "id": 1,
-      "school": "Brown University",
-      "degree": "M.S. in Computational Biology",
-      "status": "In Progress",
-      "start_date": "09/2023",
-      "end_date": "05/2025",
-      "gpa": "3.5 / 4.0",
+      "school": "University of Arkansas",
+      "degree": "Ph.D. in Computer Science",
+      "status": "Expected May 2026",
+      "start_date": "08/2021",
+      "end_date": "05/2026",
+      "gpa": "",
       "courses": [
-        "Data Structures",
-        "Algorithms",
         "Machine Learning",
-        "Computer Vision",
-        "Data Structures",
-        "Algorithms",
-        "Machine Learning",
-        "Computer Vision",
-        "Data Structures",
-        "Algorithms",
-        "Machine Learning",
-        "Computer Vision"
+        "Deep Learning",
+        "Natural Language Processing",
+        "Statistical Learning",
+        "Advanced Algorithms"
       ],
-      "other_info": [],
-      "href": "https://www.example.com"
+      "other_info": [
+        "Research focus: Large Language Models, Generative AI, Robust NLP, Causal Inference"
+      ],
+      "href": "https://www.uark.edu"
     },
     {
       "id": 2,
-      "school": "Brown University",
-      "degree": "B.A. in Computational Biology",
-      "status": "Graduated",
-      "start_date": "09/2019",
-      "end_date": "05/2023",
-      "gpa": "3.5 / 4.0",
+      "school": "University of Arkansas",
+      "degree": "M.S. in Computer Science",
+      "status": "Completed",
+      "start_date": "08/2021",
+      "end_date": "12/2024",
+      "gpa": "",
       "courses": [
-        "Data Structures",
-        "Algorithms",
         "Machine Learning",
-        "Computer Vision"
+        "Deep Learning",
+        "Natural Language Processing",
+        "Data Mining"
+      ],
+      "other_info": [],
+      "href": "https://www.uark.edu"
+    },
+    {
+      "id": 3,
+      "school": "Tribhuvan University",
+      "degree": "B.Sc. in Computer Science and Information Technology (BSc CSIT)",
+      "status": "Graduated",
+      "start_date": "2015",
+      "end_date": "2019",
+      "gpa": "",
+      "courses": [
+        "Data Structures and Algorithms",
+        "Artificial Intelligence",
+        "Database Management Systems",
+        "Operating Systems",
+        "Computer Networks",
+        "Software Engineering"
       ],
       "other_info": [
-        "Graduated with Honors",
-        "Dean's List"
+        "Kathmandu, Nepal"
       ],
-      "href": ""
+      "href": "https://tribhuvan-university.edu.np"
     }
   ]
 }
