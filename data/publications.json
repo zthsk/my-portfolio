@@ -2,49 +2,60 @@
   "publications": [
     {
       "id": "1",
-      "href": "",
-      "year": "2022",
-      "abstract": [],
-      "keywords": [],
-      "citation": "Doe, J., Smith, J. Deep Learning for Genomic Data Analysis.",
-      "bold_name": "Doe, J.",
-      "status": "In Progress"
+      "href": "https://www.mdpi.com/1099-4300/26/5/354",
+      "year": "2024",
+      "abstract": [
+        "This work studies adversarial robustness in natural language processing from an information-theoretic perspective. Instead of directly modeling adversarial perturbations, the approach treats the attack process as a complex causal mechanism and quantifies its algorithmic information using the Minimum Description Length (MDL) framework.",
+        "Using masked language modeling, the method estimates the amount of information required to transform an original text into its adversarially modified version. This signal can then be used to identify altered tokens and detect adversarial manipulation even without access to the original text."
+      ],
+      "keywords": [
+        "Adversarial NLP",
+        "Minimum Description Length",
+        "Causal Inference",
+        "Robust NLP",
+        "Language Models"
+      ],
+      "citation": "Tiwari, K., Zhang, L. (2024). Implications of Minimum Description Length for Adversarial Attack in Natural Language Processing. Entropy, 26(5), 354.",
+      "bold_name": "Tiwari, K.",
+      "status": "Published"
     },
     {
       "id": "2",
-      "href": "https://www.example.com",
-      "year": "2021",
+      "href": "https://aclanthology.org/2022.aacl-short.7/",
+      "year": "2022",
       "abstract": [
-        "Machine learning has revolutionized the field of drug discovery by enabling the rapid identification of novel therapeutic compounds. In this article, we provide an overview of the latest machine learning techniques used in drug discovery and discuss their potential applications in precision medicine. We also highlight key challenges and future directions for research in this exciting field.",
-        "Also to be noted, this is the second paragraph of the abstract."
+        "This work proposes a robust hate speech detection model that mitigates spurious correlations between lexical cues and prediction labels. Traditional classifiers often rely on superficial correlations, making them vulnerable to adversarial word or character perturbations.",
+        "The proposed method formulates hate speech detection using a causal graph and quantifies spurious correlations through causal strength. A regularized entropy loss function is then introduced to reduce reliance on these correlations, improving robustness against adversarial attacks."
       ],
       "keywords": [
-        "Deep Learning",
-        "Genomics",
-        "Machine Learning",
-        "Bioinformatics"
+        "Hate Speech Detection",
+        "Causal Inference",
+        "Adversarial Robustness",
+        "Robust NLP",
+        "Text Classification"
       ],
-      "citation": "Doe, J., Smith, J. (2021). Machine Learning for Drug Discovery. Science, 345, 678-689. https://doi.org/10.1126/science.12345",
-      "bold_name": "Doe, J.",
-      "status": "Under Review"
+      "citation": "Tiwari, K., Yuan, S., Zhang, L. (2022). Robust Hate Speech Detection via Mitigating Spurious Correlations. Proceedings of AACL-IJCNLP 2022 (Short Papers), 51–56.",
+      "bold_name": "Tiwari, K.",
+      "status": "Published"
     },
     {
       "id": "3",
-      "href": "https://www.example.com",
-      "year": "2020",
+      "href": "",
+      "year": "2026",
       "abstract": [
-        "Computational biology has emerged as a powerful tool for advancing precision medicine, enabling researchers to analyze complex biological data with unprecedented accuracy. In this review, we discuss the latest computational biology techniques and their applications in personalized medicine. We also highlight key challenges and opportunities in the field and provide insights into future directions for research.",
-        "Also to be noted, this is the second paragraph of the abstract."
+        "This ongoing research investigates counterfactual text generation in large language models through structured representation-level interventions. The work explores how stylistic attributes can be modeled as directional structures in latent embedding space, enabling controlled modification of attributes such as writing style while preserving semantic meaning.",
+        "The proposed framework integrates contrastive learning, semantic regularization, and identity-preserving constraints to guide latent representations toward target attribute anchors while minimizing semantic drift. Extensive evaluation using automatic metrics, LLM-based judges, and geometric analysis is used to study controllable attribute manipulation in language models."
       ],
       "keywords": [
-        "Deep Learning",
-        "Genomics",
-        "Machine Learning",
-        "Bioinformatics"
+        "Large Language Models",
+        "Counterfactual Generation",
+        "Controllable Text Generation",
+        "Representation Learning",
+        "Causal NLP"
       ],
-      "citation": "Smith, J, Doe, J. (2020). Computational Biology for Precision Medicine. Cell, 12, 123-135. https://doi.org/10.1016/j.cell.12345",
-      "bold_name": "Doe, J.",
-      "status": "Published"
+      "citation": "Tiwari, K., Zhang, L. Counterfactual Text Generation via Geometric Style Control in Large Language Models.",
+      "bold_name": "Tiwari, K.",
+      "status": "Manuscript in Preparation"
     }
   ]
 }

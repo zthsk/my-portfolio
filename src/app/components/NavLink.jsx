@@ -10,9 +10,11 @@ function NavLink({title, href}) {
         <Link href={href}>
             <button
                 type="button"
-                className={`rounded-lg no-underline flex h-8 mr-0 pr-5 pl-5 
-					items-center border-none cursor-pointer font-bold text-sm 
-					${pathname === href ? 'bg-black text-white' : 'bg-auto'}`}>
+                className={`rounded-full no-underline flex h-9 px-4 mr-0 items-center cursor-pointer font-medium text-sm transition-colors border ${
+                    pathname === href
+                        ? 'bg-amber-400 text-slate-950 border-amber-400 shadow-sm'
+                        : 'bg-transparent text-slate-200 border-transparent hover:border-slate-700 hover:bg-slate-800'
+                }`}>
                 {title}
             </button>
         </Link>

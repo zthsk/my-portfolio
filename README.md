@@ -1,5 +1,48 @@
 # Minimalistic Portfolio Template for Academics: A Modern and Easy Way
 
+> **Note on origin and credit**  
+> This codebase started from an existing open‑source academic portfolio template created by another author. I am **not** the original creator of the design or core idea; I have adapted and extended the template for my own use.
+
+## Customizations in this fork
+
+Compared to the original template, this version includes several changes and additions:
+
+- **Visual design**
+  - Dark, gradient background with updated typography and spacing.
+  - Restyled navigation bar (sticky, glassmorphism, pill-shaped links).
+  - Modernized cards for hero, experience, research, projects, and publications.
+- **Project & research UX**
+  - Added **status tags** for projects (e.g., In progress, Completed).
+  - Added **technology / keyword chips** for projects, research, and publications.
+  - Keyword/tech‑based **filters** on the Projects and Research pages.
+- **Layout & content structure**
+  - Two‑column layout for projects on larger screens.
+  - Short section intros for Experience, Research, and Publications.
+  - Improved hero card with a “Let’s talk” contact button and clearer research‑interest chips.
+- **Meta / SEO**
+  - Updated site metadata and Open Graph configuration to point to `kshitiztiwari.com`.
+
+The sections below (data format, how to modify JSON, etc.) are largely preserved from the original template so that users can still follow the same configuration model.
+
+---
+
+## Project structure
+
+```text
+my-portfolio/
+├── data/                  # JSON data for personal info, experience, projects, research, publications, news
+├── public/                # Static assets (CV, images, README screenshots)
+├── src/
+│   └── app/
+│       ├── components/    # React components for layout and sections
+│       ├── globals.css    # Global styles and page transitions
+│       └── page.js        # Home page entry
+├── package.json           # Next.js app configuration and scripts
+├── tailwind.config.js     # Tailwind CSS configuration
+├── next.config.mjs        # Next.js configuration
+└── README.md              # Template overview and customization notes
+```
+
 Academic portfolios are essential for showcasing research, publications, and projects to potential employers, collaborators, and the academic community. However, creating a professional and visually appealing portfolio can be challenging, especially for individuals with limited web development experience. This project aims to provide a minimalistic portfolio template designed specifically for academics, researchers, and students.
 
 The template features a clean and modern design, making it easy to customize and update with personal information, research interests, publications, and projects. Users can easily modified sections, add new pictures and texts. The template is built using Next.js, a popular React framework, and Tailwind CSS, a utility-first CSS framework, ensuring a responsive and mobile-friendly design. By providing a simple and intuitive solution for creating academic portfolios, this template empowers individuals to showcase their work effectively and professionally.

@@ -4,8 +4,8 @@ import ExperienceCard from "@/app/components/ExperienceCard";
 
 export default function Extracurricular() {
     return (
-        <div className="w-full mb-10">
-            <div className="font-bold text-xl md:text-3xl mb-10">
+        <div className="w-full mb-12">
+            <div className="font-semibold text-2xl md:text-3xl tracking-tight mb-6">
                 Extracurricular
             </div>
             <div>

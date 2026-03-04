@@ -17,7 +17,11 @@ function Header({scrolled}) {
 
     return (
         <header
-            className={`z-10 pt-4 pb-4 mb-4 pl-0 top-0 right-0 left-0 transition border-b ${scrolled ? 'border-gray-400' : 'bg-transparent border-transparent'} sticky w-full backdrop-blur-md`}>
+            className={`z-20 pt-4 pb-4 mb-4 pl-0 top-0 right-0 left-0 border-b sticky w-full backdrop-blur-md transition-colors ${
+                scrolled
+                    ? 'bg-slate-900/90 border-slate-800 shadow-sm'
+                    : 'bg-slate-900/60 border-transparent'
+            }`}>
             <div className="container mx-auto flex justify-between items-center px-5 w-full max-w-5xl">
                 <div className="flex items-center space-x-4">
                     <nav className="hidden md:flex items-center space-x-4">
@@ -29,16 +33,21 @@ function Header({scrolled}) {
                     </nav>
                     <div className="md:hidden">
                         <button onClick={toggleMenu}>
-                            <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="2x"/>
+                            <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="lg" className="text-slate-100"/>
                         </button>
                     </div>
                 </div>
                 <div className="flex items-center ml-auto pr-3 md:pr-0">
-                    <a href={personalInfo.domain} className="font-bold">{personalInfo.name}&apos;s Portfolio</a>
+                    <a
+                        href="/"
+                        className="font-semibold text-sm md:text-base tracking-tight text-slate-100 hover:text-amber-300 transition-colors"
+                    >
+                        {personalInfo.name}&apos;s Portfolio
+                    </a>
                 </div>
             </div>
             {isOpen && (
-                <nav className="md:hidden flex flex-col items-start space-y-4 p-4">
+                <nav className="md:hidden flex flex-col items-start space-y-3 px-5 pb-4 pt-2 bg-slate-950/95 border-t border-slate-800">
                     <NavLink title="About" href="/"/>
                     {(experience.extracurricular.length > 0 || experience.job.length > 0 || experience.education.length > 0) && (<NavLink title="Experience" href="/experience"/>)}
                     {publications.publications.length > 0 && (<NavLink title="Publications" href="/publications"/>)}

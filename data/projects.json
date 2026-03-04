@@ -9,6 +9,8 @@
         "Articles are chunked and embedded into a vector database to enable semantic search and retrieval over Nepali news content, supporting downstream applications such as question answering, narrative comparison across media outlets, and research on Nepali-language NLP."
       ],
       "image": "/images/nepali_rag.png",
+      "technologies": ["Qdrant", "SentenceTransformer", "Python", "FastAPI", "Retrieval-Augmented Generation"],
+      "status": "In Progress"
     },
 
     {
@@ -22,7 +24,9 @@
       "image": "/images/llm_resume_screening.png",
       "href": {
         "Github": "https://github.com/zthsk/semantic-resume-screening"
-      }
+      },
+      "technologies": ["LLM", "SBERT", "Python", "FastAPI", "Semantic Embeddings", "Transformers", "Hugging Face", "PyTorch"],
+      "status": "Completed"
     },
 
     {
@@ -34,6 +38,8 @@
         "LLM prompting was used to enhance alignment between visual and textual signals, enabling improved classification performance on multimodal hate meme datasets."
       ],
       "image": "/images/multimodal_hate_meme.png",
+      "technologies": ["LLM", "Python", "Transformers","Vision Transformers", "BERT", "Hugging Face", "PyTorch"],
+      "status": "Completed"
     },
 
     {
@@ -47,7 +53,9 @@
       "image": "/images/semantic_search.png",
       "href": {
         "Github": "https://github.com/zthsk/semantic_search"
-      }
+      },
+      "technologies": ["LDA", "LSA", "Python", "Transformers", "SBERT", "Hugging Face", "PyTorch"],
+      "status": "Completed"
     }
   ]
 }

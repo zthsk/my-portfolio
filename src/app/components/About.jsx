@@ -5,13 +5,13 @@ import React from "react";
 
 function About() {
     return (
-        <div className="flex flex-col m-auto leading max-w-5xl w-full items-start mb-10">
-            <div className="font-bold text-xl md:text-3xl mb-10">
+        <div className="flex flex-col w-full mb-12">
+            <div className="font-semibold text-2xl md:text-3xl tracking-tight mb-6">
                 About Me
             </div>
-            <div>
+            <div className="space-y-4 text-slate-300 text-base md:text-lg">
                 {personalInfo.self_description_detail.map((item, index) => (
-                    <p key={index} className="mb-4 text-lg opacity-80">
+                    <p key={index}>
                         {item}
                     </p>
                 ))}

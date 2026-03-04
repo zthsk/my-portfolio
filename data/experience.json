@@ -16,22 +16,6 @@
         "Publish research on robust NLP models and adversarial detection in venues such as AACL-IJCNLP and Entropy"
       ],
       "href": ""
-    },
-    {
-      "id": 2,
-      "title": "Graduate Teaching Assistant",
-      "company": "University of Arkansas",
-      "location": "Fayetteville, AR, USA",
-      "project_name": "Computer Science Courses",
-      "instructor": "",
-      "start_date": "08/2021",
-      "end_date": "Present",
-      "description": [
-        "Assist in teaching undergraduate computer science courses including machine learning and data structures",
-        "Lead lab sessions and mentor students on programming assignments and research projects",
-        "Evaluate assignments and support course logistics for large classes"
-      ],
-      "href": ""
     }
   ],
 
@@ -43,8 +27,8 @@
     "location": "University of Arkansas, Fayetteville, AR, USA",
     "project_name": "Community and Cultural Events",
     "instructor": "",
-    "start_date": "08/2024",
-    "end_date": "05/2025",
+    "start_date": "10/2024",
+    "end_date": "11/2025",
     "description": [
       "Served as President of the Nepalese Student Association (NeSA) for the 2024–2025 academic year",
       "Organized major cultural and community events including Nepali New Year Night, Nepali Game Night, and Deusi Bhailo celebration",
@@ -63,7 +47,7 @@
       "degree": "Ph.D. in Computer Science",
       "status": "Expected May 2026",
       "start_date": "08/2021",
-      "end_date": "05/2026",
+      "end_date": "07/2026",
       "gpa": "",
       "courses": [
         "Machine Learning",
@@ -110,9 +94,7 @@
         "Computer Networks",
         "Software Engineering"
       ],
-      "other_info": [
-        "Kathmandu, Nepal"
-      ],
+      "other_info": [],
       "href": "https://tribhuvan-university.edu.np"
     }
   ]

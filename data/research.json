@@ -2,57 +2,87 @@
   "research": [
     {
       "id": 1,
-      "research_name": "Machine Learning for Drug Discovery",
+      "research_name": "Counterfactual Text Generation via Geometric Style Control in Large Language Models",
       "company": [
-        "Brown University",
-        "Google Research"
+        "University of Arkansas"
       ],
       "instructor": [
-        "Dr. John Doe",
-        "Dr. Jane Smith"
+        "Dr. Lu Zhang"
       ],
-      "project": "Drug Discovery",
-      "collaborators": [
-        "Alice Johnson",
-        "Bob Smith"
-      ],
+      "project": "Counterfactual Text Generation",
+      "collaborators": [],
       "abstract": [
-        "Machine learning has revolutionized the field of drug discovery by enabling the rapid identification of novel therapeutic compounds. In this project, we developed a deep learning model to predict the binding affinity of small molecules to target proteins, with the goal of accelerating the drug discovery process. Our model achieved state-of-the-art performance on a benchmark dataset and demonstrated the potential to significantly reduce the time and cost associated with drug development.",
-        "Drug discovery is a complex and time-consuming process that involves the identification of lead compounds, optimization of their chemical properties, and evaluation of their biological activity. Traditional methods for predicting drug-target interactions are often limited by their reliance on experimental data and lack of scalability. Machine learning offers a promising alternative by leveraging large-scale datasets to learn complex patterns and make accurate predictions."
+        "This research investigates controllable counterfactual text generation in large language models by modeling stylistic attributes as directional structures in latent representation space. Instead of relying solely on prompt-based control, the work introduces a geometric framework that performs structured representation-level interventions to modify attributes such as writing style while preserving semantic content.",
+        "The proposed approach integrates contrastive objectives, identity-preserving constraints, and semantic regularization to guide latent representations toward target stylistic anchors while minimizing semantic drift. Extensive evaluation using automatic metrics, LLM-based judges, and geometric analysis demonstrates that stylistic transformations can be interpreted as controlled movements along attribute directions in embedding space."
       ],
       "keywords": [
-        "Machine Learning",
-        "Drug Discovery",
-        "Deep Learning"
+        "Large Language Models",
+        "Counterfactual Generation",
+        "Controllable Text Generation",
+        "Representation Learning",
+        "Causal NLP"
       ],
       "href": {
-        "Github": "https://www.example.com",
-        "Demo": "https://www.example.com",
-        "File": "/project1.pdf"
+        "Github": "",
+        "File": ""
       },
-      "status": "In Progress"
+      "status": "Ongoing"
     },
     {
       "id": 2,
-      "research_name": "Machine Learning for Drug Discovery",
+      "research_name": "Detecting Adversarial Attacks in NLP using Minimum Description Length",
       "company": [
-        "Brown University"
+        "University of Arkansas"
       ],
       "instructor": [
-        "Dr. John Doe"
+        "Dr. Lu Zhang"
       ],
-      "project": "",
+      "project": "MDL-based Adversarial Detection",
       "collaborators": [],
       "abstract": [
-        "Machine learning has revolutionized the field of drug discovery by enabling the rapid identification of novel therapeutic compounds. In this project, we developed a deep learning model to predict the binding affinity of small molecules to target proteins, with the goal of accelerating the drug discovery process. Our model achieved state-of-the-art performance on a benchmark dataset and demonstrated the potential to significantly reduce the time and cost associated with drug development."
+        "This research explores the use of the Minimum Description Length (MDL) principle to detect adversarial attacks in natural language processing systems. Adversarial attacks often introduce subtle perturbations that change model predictions while preserving human readability.",
+        "The proposed framework estimates the algorithmic information content of text using masked language modeling and analyzes how adversarial perturbations alter the description length of sentences. The approach provides a principled information-theoretic signal for detecting adversarial manipulation in NLP systems."
       ],
       "keywords": [
-        "Machine Learning"
+        "Adversarial NLP",
+        "Minimum Description Length",
+        "Robust Machine Learning",
+        "Information Theory",
+        "Language Models"
       ],
       "href": {
-        "Github": "https://www.example.com"
+        "Github": "https://github.com/zthsk/MDL-MLM",
+        "File": "https://www.mdpi.com/1099-4300/26/5/354"
       },
-      "status": "Completed"
+      "status": "Published (Entropy 2024)"
+    },
+    {
+      "id": 3,
+      "research_name": "Robust Hate Speech Detection via Mitigating Spurious Correlations",
+      "company": [
+        "University of Arkansas"
+      ],
+      "instructor": [
+        "Dr. Lu Zhang"
+      ],
+      "project": "CEBERT",
+      "collaborators": ["Dr. Shuhan Yuan"],
+      "abstract": [
+        "This work proposes CEBERT, a robust hate speech detection framework designed to mitigate spurious correlations in text classification models. Traditional models often rely on superficial lexical cues that lead to poor generalization and vulnerability to adversarial manipulation.",
+        "The proposed approach introduces a causal graph formulation and entropy-based regularization to encourage models to focus on causal linguistic signals rather than spurious patterns. Experiments demonstrate improved robustness against adversarial word and character perturbations while maintaining strong predictive performance."
+      ],
+      "keywords": [
+        "Robust NLP",
+        "Hate Speech Detection",
+        "Causal Inference",
+        "Adversarial Robustness",
+        "Text Classification"
+      ],
+      "href": {
+        "Github": "https://github.com/zthsk/CEBERT",
+        "File": "https://aclanthology.org/2022.aacl-short.7"
+      },
+      "status": "Published (AACL-IJCNLP 2022)"
     }
   ]
 }
