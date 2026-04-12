@@ -38,6 +38,9 @@
         "LLM prompting was used to enhance alignment between visual and textual signals, enabling improved classification performance on multimodal hate meme datasets."
       ],
       "image": "/images/multimodal_hate_meme.png",
+      "href":{
+        "Github": "https://github.com/zthsk/hatememe-classification"
+      },
       "technologies": ["LLM", "Python", "Transformers","Vision Transformers", "BERT", "Hugging Face", "PyTorch"],
       "status": "Completed"
     },
