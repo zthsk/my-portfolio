@@ -6,9 +6,9 @@
   "work_place_url": "https://www.uark.edu",
   "site_description": "Personal website of Kshitiz Tiwari — PhD researcher in Large Language Models, NLP, and Causal AI.",
   "greetings_on_homepage": "Welcome!",
-  "self_description_brief": "PhD Student in Computer Science working on Large Language Models, Causal NLP, and Robust AI",
+  "self_description_brief": "PhD Candidate in Computer Science working on Large Language Models, Causal NLP, and Robust AI",
   "self_description_detail": [
-    "Hello! I’m Kshitiz Tiwari, a PhD student in Computer Science at the University of Arkansas specializing in Natural Language Processing, Large Language Models, and Causal Inference. My research focuses on making language models more controllable, robust, and interpretable.",
+    "Hello! I’m Kshitiz Tiwari, a PhD Candidate in Computer Science at the University of Arkansas specializing in Natural Language Processing, Large Language Models, and Causal Inference. My research focuses on making language models more controllable, robust, and interpretable.",
     "My work explores how causal reasoning and structured representation learning can improve modern generative models. In particular, I study counterfactual text generation — developing methods that allow language models to modify specific attributes such as style, sentiment, or tone while preserving the underlying semantic meaning.",
     "I have published research on robust NLP systems and adversarial resilience, including work presented at AACL-IJCNLP and in the Entropy journal. My recent work investigates geometric and representation-level approaches for controllable language generation and interpretable model behavior.",
     "Alongside my research, I enjoy building large-scale datasets and systems. I am currently developing Nepali language resources, including large news corpora and retrieval-augmented generation systems aimed at supporting AI development for underrepresented languages.",
