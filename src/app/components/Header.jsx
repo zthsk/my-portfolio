@@ -17,10 +17,10 @@ function Header({scrolled}) {
 
     return (
         <header
-            className={`z-20 pt-4 pb-4 mb-4 pl-0 top-0 right-0 left-0 border-b sticky w-full backdrop-blur-md transition-colors ${
+            className={`z-20 pt-3 pb-3 mb-4 pl-0 top-0 right-0 left-0 border-b sticky w-full backdrop-blur-md transition-colors ${
                 scrolled
-                    ? 'bg-slate-900/90 border-slate-800 shadow-sm'
-                    : 'bg-slate-900/60 border-transparent'
+                    ? 'bg-zinc-950/90 border-zinc-800 shadow-sm'
+                    : 'bg-zinc-950/70 border-transparent'
             }`}>
             <div className="container mx-auto flex justify-between items-center px-5 w-full max-w-5xl">
                 <div className="flex items-center space-x-4">
@@ -32,22 +32,27 @@ function Header({scrolled}) {
                         {projects.projects.length > 0 && (<NavLink title="Projects" href="/projects"/>)}
                     </nav>
                     <div className="md:hidden">
-                        <button onClick={toggleMenu}>
-                            <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="lg" className="text-slate-100"/>
+                        <button
+                            type="button"
+                            onClick={toggleMenu}
+                            className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-zinc-800 bg-zinc-950/70 text-zinc-100 transition-colors hover:border-cyan-300/70 focus:outline-none focus:ring-2 focus:ring-cyan-300"
+                            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+                        >
+                            <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="lg" className="text-zinc-100"/>
                         </button>
                     </div>
                 </div>
                 <div className="flex items-center ml-auto pr-3 md:pr-0">
                     <a
                         href="/"
-                        className="font-semibold text-sm md:text-base tracking-tight text-slate-100 hover:text-amber-300 transition-colors"
+                        className="font-semibold text-sm md:text-base tracking-tight text-zinc-100 hover:text-cyan-200 transition-colors"
                     >
                         {personalInfo.name}&apos;s Portfolio
                     </a>
                 </div>
             </div>
             {isOpen && (
-                <nav className="md:hidden flex flex-col items-start space-y-3 px-5 pb-4 pt-2 bg-slate-950/95 border-t border-slate-800">
+                <nav className="md:hidden flex flex-col items-start space-y-3 px-5 pb-4 pt-2 bg-zinc-950/95 border-t border-zinc-800">
                     <NavLink title="About" href="/"/>
                     {(experience.extracurricular.length > 0 || experience.job.length > 0 || experience.education.length > 0) && (<NavLink title="Experience" href="/experience"/>)}
                     {publications.publications.length > 0 && (<NavLink title="Publications" href="/publications"/>)}

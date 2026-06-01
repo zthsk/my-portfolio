@@ -4,17 +4,16 @@
   "email": "ktiwar@uark.edu",
   "work_place": "University of Arkansas",
   "work_place_url": "https://www.uark.edu",
-  "site_description": "Personal website of Kshitiz Tiwari — PhD researcher in Large Language Models, NLP, and Causal AI.",
+  "site_description": "Personal website of Kshitiz Tiwari — PhD researcher seeking AI Engineer, ML Engineer, and NLP roles.",
   "greetings_on_homepage": "Welcome!",
-  "self_description_brief": "PhD Candidate in Computer Science working on Large Language Models, Causal NLP, and Robust AI",
+  "self_description_brief": "PhD Candidate in Computer Science building LLM, NLP, and ML systems for AI engineering roles",
   "self_description_detail": [
-    "Hello! I’m Kshitiz Tiwari, a PhD Candidate in Computer Science at the University of Arkansas specializing in Natural Language Processing, Large Language Models, and Causal Inference. My research focuses on making language models more controllable, robust, and interpretable.",
-    "My work explores how causal reasoning and structured representation learning can improve modern generative models. In particular, I study counterfactual text generation — developing methods that allow language models to modify specific attributes such as style, sentiment, or tone while preserving the underlying semantic meaning.",
-    "I have published research on robust NLP systems and adversarial resilience, including work presented at AACL-IJCNLP and in the Entropy journal. My recent work investigates geometric and representation-level approaches for controllable language generation and interpretable model behavior.",
-    "Alongside my research, I enjoy building large-scale datasets and systems. I am currently developing Nepali language resources, including large news corpora and retrieval-augmented generation systems aimed at supporting AI development for underrepresented languages.",
-    "My work sits at the intersection of research and engineering — training and evaluating large models, designing scalable data pipelines, and building tools that translate theoretical ideas into practical systems.",
-    "Outside research, I enjoy exploring new technologies, building experimental side projects, reading science fiction, and thinking about how AI systems can be designed to be more transparent and responsible.",
-    "If you are interested in collaborating, discussing research ideas, or building impactful AI systems, feel free to reach out."
+    "Hello! I am Kshitiz Tiwari, a PhD Candidate in Computer Science at the University of Arkansas specializing in Natural Language Processing, Large Language Models, and Causal Inference. I am actively looking for AI Engineer, Machine Learning Engineer, and NLP-focused roles where I can start the next phase of my career after completing my PhD.",
+    "I am strongest at turning research ideas into working AI systems: building NLP pipelines, designing retrieval-augmented generation workflows, training and evaluating transformer models, creating semantic search and ranking systems, and writing reproducible research code that can be tested, inspected, and extended.",
+    "My research focuses on controllable, robust, and interpretable language models. I work on counterfactual text generation, causal NLP, adversarial robustness, representation learning, and methods that help language models change targeted attributes while preserving meaning.",
+    "I have published research on robust NLP systems and adversarial resilience, including work presented at AACL-IJCNLP and in the Entropy journal. I also build applied AI projects involving LLM orchestration, semantic embeddings, multimodal modeling, candidate ranking, and evidence-grounded retrieval systems.",
+    "On the engineering side, I am comfortable with Python, PyTorch, Hugging Face Transformers, Sentence-BERT, FastAPI, vector search, data processing, evaluation workflows, and the practical pieces needed to move from experiments to usable tools.",
+    "I am especially interested in teams working on applied LLM systems, NLP products, information retrieval, trustworthy AI, and ML infrastructure. If you are hiring for AI Engineer, ML Engineer, NLP Engineer, or Applied Scientist roles, I would be happy to connect."
   ],
   "cv_link": "/cv.pdf",
   "research_interests": [

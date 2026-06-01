@@ -17,7 +17,7 @@ const Box = ({href, label, onClick, children}) => (
        rel="noopener noreferrer"
        href={href}
        aria-label={label}
-       className="flex items-center justify-center cursor-pointer transition-colors rounded-full select-none w-9 h-9 mx-1.5 bg-slate-900/60 border border-slate-700 hover:border-amber-400/80 hover:bg-slate-800/90"
+       className="flex items-center justify-center cursor-pointer transition-colors rounded-md select-none w-9 h-9 bg-zinc-950/70 border border-zinc-800 hover:border-cyan-300/80 hover:bg-zinc-900"
        onClick={onClick}>
         {children}
     </a>
@@ -25,7 +25,7 @@ const Box = ({href, label, onClick, children}) => (
 
 const SocialMedia = () => {
     return (
-        <div className="flex flex-wrap justify-between max-w-full">
+        <div className="flex flex-wrap gap-2 max-w-full">
             {personalInfo.social_media.linkedin && (
                 <Box href={personalInfo.social_media.linkedin} label="LinkedIn">
                     <FontAwesomeIcon icon={faLinkedin} size="lg" className="text-sky-400"/>
@@ -33,7 +33,7 @@ const SocialMedia = () => {
             )}
             {personalInfo.social_media.X && (
                 <Box href={personalInfo.social_media.X} label="X">
-                    <FontAwesomeIcon icon={faXTwitter} size="lg" className="text-slate-100"/>
+                    <FontAwesomeIcon icon={faXTwitter} size="lg" className="text-zinc-100"/>
                 </Box>
             )}
             {personalInfo.social_media.instagram && (
@@ -48,7 +48,7 @@ const SocialMedia = () => {
             )}
             {personalInfo.social_media.github && (
                 <Box href={personalInfo.social_media.github} label="Github">
-                    <FontAwesomeIcon icon={faGithub} size="lg" className="text-slate-100"/>
+                    <FontAwesomeIcon icon={faGithub} size="lg" className="text-zinc-100"/>
                 </Box>
             )}
             {personalInfo.social_media.google_scholar && (

@@ -9,10 +9,10 @@ export default function Publications() {
 
     return (
         <div className="w-full mb-12">
-            <div className="font-semibold text-2xl md:text-3xl tracking-tight mb-6">
+            <div className="font-semibold text-2xl md:text-3xl tracking-tight mb-6 text-zinc-50">
                 Publications
             </div>
-            <p className="text-sm text-slate-400 mb-4">
+            <p className="text-sm text-zinc-400 mb-4">
                 Selected publications and manuscripts related to large language models, robust NLP, and machine learning.
             </p>
             {sortedPublications.map(item => (
@@ -27,20 +27,20 @@ function PublicationCard({ item }) {
 
     const cardContent = (
         <>
-            <div className="flex items-center text-xs md:text-sm text-slate-400">
+            <div className="flex items-center text-xs md:text-sm text-zinc-500">
                 <span className="mr-2">{item.year}</span>
                 {item.status && (
-                    <span className={`ml-2 px-2 py-1 rounded-full text-xs font-semibold
-                        ${item.status === 'Published' ? 'bg-emerald-100 text-emerald-900' :
-                          item.status === 'In Progress' ? 'bg-amber-100 text-amber-900' :
-                          'bg-sky-100 text-sky-900'}`}>
+                    <span className={`ml-2 rounded-md border px-2 py-1 text-xs font-semibold
+                        ${item.status === 'Published' ? 'border-emerald-400/40 bg-emerald-400/10 text-emerald-200' :
+                          item.status === 'In Progress' ? 'border-cyan-400/40 bg-cyan-400/10 text-cyan-200' :
+                          'border-sky-400/40 bg-sky-400/10 text-sky-200'}`}>
                         {item.status}
                     </span>
                 )}
             </div>
-            <div className="text-base md:text-lg mt-2 text-slate-50" dangerouslySetInnerHTML={{ __html: highlightedCitation }}></div>
+            <div className="text-base md:text-lg mt-2 text-zinc-50" dangerouslySetInnerHTML={{ __html: highlightedCitation }}></div>
             {Array.isArray(item.abstract) && item.abstract.length > 0 && (
-                <div className="mt-2 text-sm md:text-base text-slate-300">
+                <div className="mt-2 text-sm md:text-base text-zinc-300">
                     {item.abstract.map((paragraph, index) => (
                         <p key={index} className="mb-2">{paragraph}</p>
                     ))}
@@ -51,7 +51,7 @@ function PublicationCard({ item }) {
                     {item.keywords.map((keyword) => (
                         <span
                             key={keyword}
-                            className="rounded-full border border-slate-700 bg-slate-900/80 px-3 py-1 text-xs md:text-xs text-slate-100"
+                            className="rounded-md border border-zinc-800 bg-zinc-900/80 px-3 py-1 text-xs md:text-xs text-zinc-200"
                         >
                             {keyword}
                         </span>
@@ -64,15 +64,17 @@ function PublicationCard({ item }) {
     return item.href ? (
         <a
             href={item.href}
-            className="block relative mb-6 p-5 rounded-2xl border border-slate-800 bg-slate-900/70 hover:bg-slate-900/95 hover:border-amber-400/80 shadow-lg shadow-black/30 hover:shadow-amber-500/20 transition-all"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block relative mb-6 p-5 rounded-lg border border-zinc-800 bg-zinc-950/70 hover:bg-zinc-950 hover:border-cyan-400/60 shadow-lg shadow-black/20 transition-colors"
         >
-            <div className="absolute bottom-3 right-3 text-slate-400">
+            <div className="absolute bottom-3 right-3 text-zinc-500">
                 <FontAwesomeIcon icon={faExternalLinkAlt} className="text-sm" />
             </div>
             {cardContent}
         </a>
     ) : (
-        <div className="relative mb-6 p-5 rounded-2xl border border-slate-800 bg-slate-900/60 shadow-lg shadow-black/30">
+        <div className="relative mb-6 p-5 rounded-lg border border-zinc-800 bg-zinc-950/60 shadow-lg shadow-black/20">
             {cardContent}
         </div>
     );

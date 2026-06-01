@@ -2,63 +2,117 @@
   "projects": [
     {
       "id": 1,
-      "title": "Nepali RAG: Large-Scale Nepali News Retrieval System",
+      "title": "Market Brief Agents",
+      "subtitle": "Agentic market research-to-video pipeline",
+      "category": "AI Systems",
+      "year": "2026",
+      "lastUpdated": "June 2026",
+      "featured": true,
       "description": [
-        "Nepali RAG is a large-scale data ingestion and retrieval system designed to collect and analyze Nepali-language news from multiple online sources.",
-        "The system crawls thousands of articles from major Nepali news outlets and processes them through a structured pipeline including metadata extraction, Bikram Sambat date conversion, deduplication, and unified JSON schema storage.",
-        "Articles are chunked and embedded into a vector database to enable semantic search and retrieval over Nepali news content, supporting downstream applications such as question answering, narrative comparison across media outlets, and research on Nepali-language NLP."
+        "Local-first AI engineering system that turns market events into evidence-grounded short-form financial briefings using source review, RAG retrieval, agent orchestration, and validation gates.",
+        "The public demo path uses synthetic data and deterministic fallbacks, with audit bundles, typed script manifests, a Streamlit operations dashboard, a Next.js shell, and Remotion rendering."
       ],
-      "image": "/images/nepali_rag.png",
-      "technologies": ["Qdrant", "SentenceTransformer", "Python", "FastAPI", "Retrieval-Augmented Generation"],
-      "status": "In Progress"
+      "image": "/images/market_brief_agents.png",
+      "href": {
+        "Github": "https://github.com/zthsk/market-brief-agents"
+      },
+      "technologies": ["Python", "RAG", "LangGraph", "Pydantic", "Streamlit", "Next.js", "Remotion"],
+      "status": "Active"
     },
-
     {
       "id": 2,
-      "title": "LLM-Based Resume Screening and Candidate Ranking",
+      "title": "Hate Meme Detection",
+      "subtitle": "Multimodal BERT, ViT, fusion, and Gemini experiments",
+      "category": "Multimodal AI",
+      "year": "2026",
+      "lastUpdated": "April 2026",
+      "featured": true,
       "description": [
-        "This project implements an end-to-end pipeline for automated resume screening and candidate ranking using large language models and semantic embeddings.",
-        "The system parses PDF resumes into structured representations and uses LLM prompting to generate standardized candidate summaries. Job descriptions are encoded using SBERT embeddings and compared with candidate profiles to compute semantic similarity scores.",
-        "A composite ranking framework combines embedding similarity, keyword coverage, and experience signals to retrieve and rank the most relevant candidates for a given job description."
+        "Reproducible research codebase for multimodal hate meme detection across text-only BERT, image-only Vision Transformer, ViT+BERT fusion, and Gemini prompting baselines.",
+        "Refactors experiment scripts into a package with shared data loading, configs, training loops, evaluation metrics, prompt templates, and smoke tests that run without private datasets or API calls."
+      ],
+      "image": "/images/multimodal_hate_meme.png",
+      "href": {
+        "Github": "https://github.com/zthsk/hatememe-classification"
+      },
+      "technologies": ["Python", "BERT", "Vision Transformer", "Gemini", "PyTorch", "Hugging Face"],
+      "status": "Completed"
+    },
+    {
+      "id": 3,
+      "title": "Semantic Resume Screening / TalentAI",
+      "subtitle": "Resume parsing and semantic candidate matching modules",
+      "category": "Applied NLP",
+      "year": "2025",
+      "lastUpdated": "August 2025",
+      "featured": true,
+      "description": [
+        "Standalone AI modules for resume parsing, candidate summarization, skill extraction, and job-candidate matching through semantic embeddings and hybrid ranking.",
+        "Includes FastAPI interfaces, command-line workflows, Groq and local LLM provider support, and a recommendation system built around Sentence-BERT similarity plus skill and title alignment."
       ],
       "image": "/images/llm_resume_screening.png",
       "href": {
         "Github": "https://github.com/zthsk/semantic-resume-screening"
       },
-      "technologies": ["LLM", "SBERT", "Python", "FastAPI", "Semantic Embeddings", "Transformers", "Hugging Face", "PyTorch"],
+      "technologies": ["Python", "FastAPI", "Sentence-BERT", "LangChain", "Groq", "Pydantic"],
       "status": "Completed"
     },
-
-    {
-      "id": 3,
-      "title": "Multimodal Hate Meme Detection",
-      "description": [
-        "This project explores multimodal hate speech detection by jointly modeling textual and visual signals present in internet memes.",
-        "The system combines Vision Transformers for image representation with BERT-based language models for text understanding to perform cross-modal reasoning.",
-        "LLM prompting was used to enhance alignment between visual and textual signals, enabling improved classification performance on multimodal hate meme datasets."
-      ],
-      "image": "/images/multimodal_hate_meme.png",
-      "href":{
-        "Github": "https://github.com/zthsk/hatememe-classification"
-      },
-      "technologies": ["LLM", "Python", "Transformers","Vision Transformers", "BERT", "Hugging Face", "PyTorch"],
-      "status": "Completed"
-    },
-
     {
       "id": 4,
-      "title": "Semantic Search Benchmarking with Transformer Embeddings",
+      "title": "Semantic Search Benchmarking",
+      "subtitle": "LSA, LDA, GloVe, and SBERT retrieval comparison",
+      "category": "Information Retrieval",
+      "year": "2023",
+      "lastUpdated": "August 2025",
+      "featured": false,
       "description": [
-        "This project benchmarks traditional topic modeling approaches against modern transformer-based embeddings for semantic document retrieval.",
-        "Classical methods including Latent Semantic Analysis (LSA) and Latent Dirichlet Allocation (LDA) were compared against dense embeddings generated by SBERT.",
-        "Experimental results demonstrated that transformer-based embeddings significantly improve retrieval accuracy and semantic relevance compared to earlier approaches such as GloVe and bag-of-words models."
+        "Benchmarking project comparing classical topic models and dense transformer embeddings for semantic search over MS MARCO-style document retrieval tasks.",
+        "Implements LSA, LDA, GloVe, and SBERT retrieval workflows with query scripts and evaluation metrics including precision, recall, F1, average precision, and MAP."
       ],
       "image": "/images/semantic_search.png",
       "href": {
         "Github": "https://github.com/zthsk/semantic_search"
       },
-      "technologies": ["LDA", "LSA", "Python", "Transformers", "SBERT", "Hugging Face", "PyTorch"],
+      "technologies": ["Python", "SBERT", "LDA", "LSA", "GloVe", "MS MARCO"],
       "status": "Completed"
+    },
+    {
+      "id": 5,
+      "title": "CEBERT",
+      "subtitle": "Causal regularization for robust hate speech detection",
+      "category": "Robust NLP",
+      "year": "2022",
+      "lastUpdated": "August 2025",
+      "featured": false,
+      "description": [
+        "Official implementation of the AACL-IJCNLP 2022 paper on robust hate speech detection through mitigation of spurious correlations.",
+        "Uses a causal graph view of text classification and an entropy-regularized objective to improve robustness against word-level and character-level adversarial attacks."
+      ],
+      "image": "/images/cebert.png",
+      "href": {
+        "Github": "https://github.com/zthsk/CEBERT"
+      },
+      "technologies": ["Python", "BERT", "Causal NLP", "PyTorch", "Transformers"],
+      "status": "Published Research"
+    },
+    {
+      "id": 6,
+      "title": "MDL-MLM",
+      "subtitle": "Minimum description length analysis for adversarial NLP",
+      "category": "Causal NLP",
+      "year": "2024",
+      "lastUpdated": "August 2025",
+      "featured": false,
+      "description": [
+        "Official repository for the Entropy 2024 article studying implications of minimum description length for adversarial attacks in natural language processing.",
+        "Provides workflows for perturbation data preparation, masked language model fine-tuning, fill-mask generation, and MDL computation across causal and anticausal directions."
+      ],
+      "image": "/images/mdl_mlm.png",
+      "href": {
+        "Github": "https://github.com/zthsk/MDL-MLM"
+      },
+      "technologies": ["Python", "Masked LM", "MDL", "PyTorch", "Transformers"],
+      "status": "Published Research"
     }
   ]
 }

@@ -11,7 +11,7 @@ export default function News() {
 
     return (
         <div className="w-full mb-12">
-            <div className="font-semibold text-2xl md:text-3xl tracking-tight mb-6">
+            <div className="font-semibold text-2xl md:text-3xl tracking-tight mb-6 text-zinc-50">
                 Recent News
             </div>
             {sortedNews.map(item => (
@@ -19,18 +19,20 @@ export default function News() {
                     <a
                         key={item.id}
                         href={item.href}
-                        className="block relative mb-4 p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-900/95 hover:border-amber-400/80 hover:shadow-amber-500/20 shadow-md shadow-black/30 transition-all"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block relative mb-4 p-4 rounded-lg border border-zinc-800 bg-zinc-950/60 hover:bg-zinc-950 hover:border-cyan-400/60 shadow-md shadow-black/20 transition-colors"
                     >
-                        <div className="absolute bottom-3 right-3 text-slate-400">
+                        <div className="absolute bottom-3 right-3 text-zinc-500">
                             <FontAwesomeIcon icon={faExternalLinkAlt} className="text-sm" />
                         </div>
-                        <div className="text-xs md:text-sm text-slate-400">{item.time}</div>
-                        <div className="text-base md:text-lg text-slate-100 mt-1">{item.content}</div>
+                        <div className="text-xs md:text-sm text-zinc-500">{item.time}</div>
+                        <div className="text-base md:text-lg text-zinc-100 mt-1">{item.content}</div>
                     </a>
                 ) : (
-                    <div key={item.id} className="relative mb-4 p-4 rounded-xl border border-slate-800 bg-slate-900/50">
-                        <div className="text-xs md:text-sm text-slate-400">{item.time}</div>
-                        <div className="text-base md:text-lg text-slate-100 mt-1">{item.content}</div>
+                    <div key={item.id} className="relative mb-4 p-4 rounded-lg border border-zinc-800 bg-zinc-950/50">
+                        <div className="text-xs md:text-sm text-zinc-500">{item.time}</div>
+                        <div className="text-base md:text-lg text-zinc-100 mt-1">{item.content}</div>
                     </div>
                 )
             ))}

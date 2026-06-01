@@ -8,6 +8,7 @@ import NameCard from "@/app/components/NameCard";
 import News from "@/app/components/News";
 import About from "@/app/components/About";
 import LinkSection from "@/app/components/LinkSection";
+import {FeaturedProjects} from "@/app/components/Projects";
 
 import personalInfo from '../../data/personalInfo.json';
 import news from '../../data/news.json'
@@ -22,6 +23,8 @@ export default function Home() {
                 <Greetings greetings_on_homepage={personalInfo.greetings_on_homepage}/>}
 
             <NameCard/>
+
+            <FeaturedProjects/>
 
             {news.news.length > 0 && <News/>}
 
