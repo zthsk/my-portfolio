@@ -35,10 +35,10 @@ export default function Projects() {
         <section className="w-full mb-16">
             <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
                 <div>
-                    <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
+                    <p className="mb-2 font-mono text-xs font-semibold uppercase tracking-[0.16em] text-cyan-300">
                         Public Work
                     </p>
-                    <h1 className="text-2xl font-semibold tracking-tight text-zinc-50 md:text-3xl">
+                    <h1 className="font-display text-3xl font-medium tracking-normal text-zinc-50 md:text-4xl">
                         Projects
                     </h1>
                     <p className="mt-3 max-w-2xl text-sm leading-6 text-zinc-400">
@@ -89,10 +89,10 @@ export function FeaturedProjects() {
         <section className="w-full border-b border-zinc-800/80 pb-12">
             <div className="mb-5 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
                 <div>
-                    <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
+                    <p className="mb-2 font-mono text-xs font-semibold uppercase tracking-[0.16em] text-cyan-300">
                         Featured Projects
                     </p>
-                    <h2 className="text-xl font-semibold tracking-tight text-zinc-50 md:text-2xl">
+                    <h2 className="font-display text-2xl font-medium tracking-normal text-zinc-50 md:text-3xl">
                         Recent public AI systems
                     </h2>
                 </div>
@@ -170,7 +170,7 @@ function ProjectCard({project, compact = false}) {
                     )}
                 </div>
 
-                <h2 className={`${compact ? "text-lg" : "text-xl md:text-2xl"} break-words font-semibold leading-tight tracking-tight text-zinc-50`}>
+                <h2 className={`${compact ? "text-xl" : "text-2xl md:text-3xl"} break-words font-display font-medium leading-tight tracking-normal text-zinc-50`}>
                     {title}
                 </h2>
 

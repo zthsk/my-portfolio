@@ -7,7 +7,7 @@ import {faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons';
 export default function Education() {
     return (
         <div className="w-full mb-12">
-            <div className="font-semibold text-2xl md:text-3xl tracking-tight mb-6 text-zinc-50">
+            <div className="font-display text-3xl font-medium tracking-normal mb-6 text-zinc-50 md:text-4xl">
                 Education
             </div>
             <div>

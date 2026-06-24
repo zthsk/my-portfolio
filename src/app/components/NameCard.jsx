@@ -10,10 +10,10 @@ function NameCard() {
     return (
         <section className="grid w-full gap-8 border-b border-zinc-800/80 pb-12 md:min-h-[520px] md:grid-cols-[1.35fr_0.65fr] md:items-center md:gap-12">
             <div className="order-2 md:order-1">
-                <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">
+                <p className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.16em] text-cyan-300">
                     AI Research Engineer / PhD Candidate
                 </p>
-                <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-zinc-50 md:text-6xl">
+                <h1 className="max-w-3xl font-display text-4xl font-medium leading-[0.98] tracking-normal text-zinc-50 sm:text-5xl md:text-7xl">
                     {personalInfo.name}
                 </h1>
                 <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-300 md:text-xl">
@@ -24,7 +24,7 @@ function NameCard() {
                     {personalInfo.research_interests.map((interest) => (
                         <span
                             key={interest}
-                            className="rounded-md border border-zinc-800 bg-zinc-950/80 px-3 py-1.5 text-xs text-zinc-300 md:text-sm"
+                            className="rounded-md border border-zinc-800 bg-zinc-950/80 px-3 py-1.5 font-mono text-xs text-zinc-300 md:text-sm"
                         >
                             {interest}
                         </span>
@@ -65,6 +65,7 @@ function NameCard() {
             <div className="order-1 flex justify-center md:order-2 md:justify-end">
                 <div className="relative aspect-square w-44 md:w-64">
                     <div className="absolute inset-3 rounded-lg border border-cyan-300/40"/>
+                    <div className="absolute -inset-2 rounded-lg border border-violet-300/15"/>
                     <Image
                         src="/images/avatar.jpeg"
                         alt={`${personalInfo.name} profile picture`}

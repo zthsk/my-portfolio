@@ -30,6 +30,7 @@ function Header({scrolled}) {
                         {publications.publications.length > 0 && (<NavLink title="Publications" href="/publications"/>)}
                         {research.research.length > 0 && (<NavLink title="Research" href="/research"/>)}
                         {projects.projects.length > 0 && (<NavLink title="Projects" href="/projects"/>)}
+                        <NavLink title="Blog" href="/blog"/>
                     </nav>
                     <div className="md:hidden">
                         <button
@@ -45,7 +46,7 @@ function Header({scrolled}) {
                 <div className="flex items-center ml-auto pr-3 md:pr-0">
                     <a
                         href="/"
-                        className="font-semibold text-sm md:text-base tracking-tight text-zinc-100 hover:text-cyan-200 transition-colors"
+                        className="font-display text-base font-medium tracking-normal text-zinc-100 transition-colors hover:text-cyan-200 md:text-lg"
                     >
                         {personalInfo.name}&apos;s Portfolio
                     </a>
@@ -58,6 +59,7 @@ function Header({scrolled}) {
                     {publications.publications.length > 0 && (<NavLink title="Publications" href="/publications"/>)}
                     {research.research.length > 0 && (<NavLink title="Research" href="/research"/>)}
                     {projects.projects.length > 0 && (<NavLink title="Projects" href="/projects"/>)}
+                    <NavLink title="Blog" href="/blog"/>
                 </nav>
             )}
         </header>

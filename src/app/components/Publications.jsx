@@ -9,7 +9,7 @@ export default function Publications() {
 
     return (
         <div className="w-full mb-12">
-            <div className="font-semibold text-2xl md:text-3xl tracking-tight mb-6 text-zinc-50">
+            <div className="font-display text-3xl font-medium tracking-normal mb-6 text-zinc-50 md:text-4xl">
                 Publications
             </div>
             <p className="text-sm text-zinc-400 mb-4">

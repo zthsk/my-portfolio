@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --font-body: "Avenir Next", "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    --font-mono: "SFMono-Regular", "Cascadia Code", "Roboto Mono", Consolas, monospace;
+}
+
 html,
 body {
     width: 100%;
@@ -14,9 +20,11 @@ body {
     background:
             linear-gradient(rgba(39, 39, 42, 0.18) 1px, transparent 1px),
             linear-gradient(90deg, rgba(39, 39, 42, 0.18) 1px, transparent 1px),
-            linear-gradient(180deg, #050505 0%, #09090b 48%, #111113 100%);
+            linear-gradient(135deg, rgba(8, 47, 73, 0.24) 0%, transparent 34%, rgba(88, 28, 135, 0.12) 66%, transparent 100%),
+            linear-gradient(180deg, #050505 0%, #09090b 48%, #101014 100%);
     background-size: 44px 44px, 44px 44px, auto;
     color: #e5e7eb;
+    font-family: var(--font-body);
 }
 
 * {
@@ -26,6 +34,20 @@ body {
 
 main {
     scroll-behavior: smooth;
+}
+
+::selection {
+    background: rgba(103, 232, 249, 0.24);
+    color: #f8fafc;
+}
+
+@layer base {
+    h1,
+    h2,
+    h3 {
+        font-family: var(--font-display);
+        letter-spacing: 0;
+    }
 }
 
 @keyframes fade-in-up {

@@ -19,6 +19,7 @@ Compared to the original template, this version includes several changes and add
   - Two‑column layout for projects on larger screens.
   - Short section intros for Experience, Research, and Publications.
   - Improved hero card with a “Let’s talk” contact button and clearer research‑interest chips.
+  - Markdown-backed blog section with a homepage latest-writing preview.
 - **Meta / SEO**
   - Updated site metadata and Open Graph configuration to point to `kshitiztiwari.com`.
 
@@ -30,6 +31,8 @@ The sections below (data format, how to modify JSON, etc.) are largely preserved
 
 ```text
 my-portfolio/
+├── content/
+│   └── blog/              # Markdown blog posts
 ├── data/                  # JSON data for personal info, experience, projects, research, publications, news
 ├── public/                # Static assets (CV, images, README screenshots)
 ├── src/
@@ -88,6 +91,31 @@ To modify the news section, open the `news.json` file in the `data` folder. You 
 | `time`     | String | The date of the news item in the format `MM/DD/YYYY`.                                                          |
 | `content`  | String | The content or description of the news item.                                                                   |
 | `href`     | String | A URL link associated with the news item. If no link is available, this field may be an empty string.          |
+
+### Blog posts
+
+To add a blog post, create a new `.md` file in `content/blog`. The filename becomes the post slug, so `my-post-title.md` is published at `/blog/my-post-title`.
+
+Each post should start with frontmatter:
+
+```md
+---
+title: "My Post Title"
+date: "2026-06-23"
+excerpt: "A short summary shown on the blog index and homepage."
+image: "/images/blog/my-post-title.png"
+imageAlt: "Short description of the blog cover image."
+tags:
+  - AI
+  - Engineering
+---
+
+## First Section
+
+Write the post body with headings, paragraphs, and bullet lists.
+```
+
+Each published post should include a project-local cover image under `public/images/blog` so the article has a visual preview on the site and in social Open Graph cards.
 
 ### Experience
 

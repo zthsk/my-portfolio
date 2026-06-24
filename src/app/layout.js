@@ -1,8 +1,9 @@
-import {Inter} from "next/font/google";
+import {config} from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 import "./globals.css";
 import personalInfo from '../../data/personalInfo.json';
 
-const inter = Inter({subsets: ["latin"]});
+config.autoAddCss = false
 
 export const metadata = {
     metadataBase: new URL('https://kshitiztiwari.com'),
@@ -24,12 +25,18 @@ export const metadata = {
         locale: 'en_US',
         type: 'website',
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: personalInfo.name + "'s Portfolio",
+        description: personalInfo.site_description,
+        images: ['/images/avatar.jpeg'],
+    },
 };
 
 export default function RootLayout({children}) {
     return (
         <html lang="en">
-        <body className={`${inter.className} text-zinc-100 antialiased`}>{children}</body>
+        <body className="font-sans text-zinc-100 antialiased">{children}</body>
         </html>
     );
 }

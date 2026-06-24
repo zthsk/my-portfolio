@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -7,6 +9,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-body)", ...defaultTheme.fontFamily.sans],
+        display: ["var(--font-display)", "ui-serif", "Georgia", "serif"],
+        mono: ["var(--font-mono)", ...defaultTheme.fontFamily.mono],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

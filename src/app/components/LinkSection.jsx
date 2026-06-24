@@ -42,7 +42,7 @@ function LinkSection() {
         <Link key={card.path} href={card.path} className="group block">
           <div className="relative min-h-[132px] overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950/70 p-5 transition-colors hover:border-cyan-400/60 hover:bg-zinc-950">
             <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-cyan-300 via-violet-300 to-emerald-300 opacity-70 group-hover:opacity-100"/>
-            <h2 className="text-lg font-semibold tracking-tight text-zinc-50 md:text-xl">
+            <h2 className="font-display text-xl font-medium tracking-normal text-zinc-50 md:text-2xl">
               {card.title}
             </h2>
             <p className="mt-2 max-w-sm text-sm leading-6 text-zinc-400">
