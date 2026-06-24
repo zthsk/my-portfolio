@@ -1,4 +1,5 @@
 import NavLink from './NavLink';
+import Link from 'next/link';
 import {useState} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBars, faTimes} from '@fortawesome/free-solid-svg-icons';
@@ -44,12 +45,12 @@ function Header({scrolled}) {
                     </div>
                 </div>
                 <div className="flex items-center ml-auto pr-3 md:pr-0">
-                    <a
+                    <Link
                         href="/"
                         className="font-display text-base font-medium tracking-normal text-zinc-100 transition-colors hover:text-cyan-200 md:text-lg"
                     >
                         {personalInfo.name}&apos;s Portfolio
-                    </a>
+                    </Link>
                 </div>
             </div>
             {isOpen && (
