@@ -1,88 +1,36 @@
-import experience from '../../../data/experience.json';
-import React from "react";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons';
-
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faExternalLinkAlt} from "@fortawesome/free-solid-svg-icons";
+import experience from "../../../data/experience.json";
 
 export default function Education() {
     return (
-        <div className="w-full mb-12">
-            <div className="font-display text-3xl font-medium tracking-normal mb-6 text-zinc-50 md:text-4xl">
-                Education
+        <section>
+            <div className="mb-6">
+                <p className="mb-2 font-mono text-xs font-semibold uppercase tracking-[0.16em] text-cyan-300">Academic background</p>
+                <h2 className="font-display text-3xl font-medium text-zinc-50 md:text-4xl">Education</h2>
             </div>
-            <div>
-                {experience.education.map((item) => (
-                    <EducationCard key={item.id} item={item}/>
-                ))}
+            <div className="grid gap-4 md:grid-cols-3">
+                {experience.education.map((item) => <EducationCard key={item.id} item={item}/>) }
             </div>
-        </div>
+        </section>
     );
 }
 
-
 function EducationCard({item}) {
-    const cardContent = (
-        <>
-            <div className="flex flex-col md:flex-row justify-between">
-                <div className="md:w-1/2 mb-4 md:mb-0">
-                    <div className="font-semibold text-xl mb-1 text-zinc-50">{item.degree}</div>
-                    <div className="text-sm text-zinc-300 mb-1">{item.school}</div>
-                    {item.gpa && (
-                        <div className="text-xs md:text-sm text-zinc-500 mb-1">GPA: {item.gpa}</div>
-                    )}
-                    <div className="text-xs md:text-sm text-zinc-500 mb-1 md:hidden">
-                        {item.status === 'In Progress' ? `${item.start_date} - Estimated: ${item.end_date}` : `${item.start_date} - ${item.end_date}`}
-                    </div>
-                </div>
-                <div className="md:w-1/2 text-right hidden md:block">
-                    <div className="text-xs md:text-sm text-zinc-500 mb-1">
-                        {item.status === 'In Progress' ? `${item.start_date} - Estimated: ${item.end_date}` : `${item.start_date} - ${item.end_date}`}
-                    </div>
-                </div>
-            </div>
-            <div className="mt-2">
-                {item.courses.length > 0 && (
-                    <div className="mb-4">
-                        <div className="font-medium text-zinc-200 mb-1">Courses:</div>
-                        <ul className="list-disc list-inside grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 text-sm md:text-base text-zinc-300">
-                            {item.courses.map((course, index) => (
-                                <li key={index} className="mr-2">{course}</li>
-                            ))}
-                        </ul>
-                    </div>
-                )}
-                {item.other_info.length > 0 && (
-                    <div className="mb-2">
-                        <div className="font-medium text-zinc-200 mb-1">Special:</div>
-                        <ul className="list-disc list-inside text-sm md:text-base text-zinc-300 space-y-1.5">
-                            {item.other_info.map((other, index) => (
-                                <li key={index}>{other}</li>
-                            ))}
-                        </ul>
-                    </div>
-                )}
-            </div>
-            {item.href && (
-                <div className="absolute bottom-3 right-3 hidden md:block text-zinc-500">
-                    <FontAwesomeIcon icon={faExternalLinkAlt} className="text-sm"/>
-                </div>
-            )}
-        </>
-    );
-
-    return item.href ? (
-        <a href={item.href}
-           target="_blank"
-           rel="noopener noreferrer"
-           className="block relative mb-6 p-5 rounded-lg border border-zinc-800 bg-zinc-950/70 shadow-lg shadow-black/20 hover:bg-zinc-950 hover:border-cyan-400/60 transition-colors">
-            <div className="absolute top-3 right-3 md:hidden text-zinc-500">
-                <FontAwesomeIcon icon={faExternalLinkAlt} className="text-sm"/>
-            </div>
-            {cardContent}
+    return (
+        <a
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative rounded-xl border border-zinc-800 bg-zinc-950/65 p-5 transition-colors hover:border-cyan-400/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
+        >
+            <FontAwesomeIcon icon={faExternalLinkAlt} className="absolute right-4 top-4 text-xs text-zinc-600 group-hover:text-cyan-200"/>
+            <p className="pr-6 font-display text-xl font-medium leading-tight text-zinc-50">{item.degree}</p>
+            <p className="mt-2 text-sm text-zinc-300">{item.school}</p>
+            <p className="mt-3 font-mono text-xs text-cyan-200">{item.status}</p>
+            {item.other_info?.map((detail) => (
+                <p key={detail} className="mt-3 text-xs leading-5 text-zinc-400">{detail}</p>
+            ))}
         </a>
-    ) : (
-        <div className="mb-6 p-5 rounded-lg border border-zinc-800 bg-zinc-950/60 shadow-lg shadow-black/20 relative">
-            {cardContent}
-        </div>
     );
 }

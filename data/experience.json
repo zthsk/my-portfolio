@@ -5,104 +5,72 @@
       "title": "Graduate Research Assistant",
       "company": "University of Arkansas",
       "location": "Fayetteville, AR, USA",
-      "project_name": "Fair and Robust Language Models",
+      "project_name": "Reliable and Controllable Language Models",
       "instructor": "Prof. Lu Zhang",
-      "start_date": "08/2021",
+      "start_date": "August 2021",
       "end_date": "Present",
       "description": [
-        "Conduct research on fair and robust language models using large language models and causal inference",
-        "Develop methods for counterfactual text generation and style transfer using LoRA, contrastive learning, and representation-level constraints",
-        "Design evaluation frameworks using LLM-as-a-judge and embedding-based semantic metrics",
-        "Publish research on robust NLP models and adversarial detection in venues such as AACL-IJCNLP and Entropy"
+        "Design controllable-generation objectives that combine representation-level intervention, contrastive learning, semantic preservation, and LLM-based evaluation.",
+        "Co-developed CEBERT, which reached 85.9% accuracy under word replacement and 86.0% under misspelling attacks, outperforming the strongest reported baselines.",
+        "Developed a Minimum Description Length framework for detecting adversarial perturbations without access to the original input, published in Entropy in 2024.",
+        "Build reproducible evaluation pipelines spanning SBERT similarity, BERTScore, classifier metrics, LLM-as-a-judge workflows, experiment tracking, and failure analysis."
       ],
       "href": ""
     }
   ],
-
- "extracurricular": [
-  {
-    "id": 1,
-    "title": "President",
-    "company": "Nepalese Student Association (NeSA)",
-    "location": "University of Arkansas, Fayetteville, AR, USA",
-    "project_name": "Community and Cultural Events",
-    "instructor": "",
-    "start_date": "10/2024",
-    "end_date": "11/2025",
-    "description": [
-      "Served as President of the Nepalese Student Association (NeSA) for the 2024–2025 academic year",
-      "Organized major cultural and community events including Nepali New Year Night, Nepali Game Night, and Deusi Bhailo celebration",
-      "Managed organizational funds, budgeting, and financial planning for student events",
-      "Coordinated with university administration and local Nepalese community organizations",
-      "Led event planning, logistics, volunteer coordination, and community outreach"
-    ],
-    "href": ""
-  }
-],
-
+  "extracurricular": [
+    {
+      "id": 1,
+      "title": "President",
+      "company": "Nepalese Student Association (NeSA)",
+      "location": "University of Arkansas, Fayetteville, AR, USA",
+      "project_name": "Community and Cultural Events",
+      "instructor": "",
+      "start_date": "October 2024",
+      "end_date": "November 2025",
+      "description": [
+        "Led planning, budgeting, logistics, volunteer coordination, and outreach for university and community cultural events.",
+        "Coordinated with university administration and local community organizations while managing organizational funds and event delivery."
+      ],
+      "href": ""
+    }
+  ],
   "education": [
     {
       "id": 1,
       "school": "University of Arkansas",
       "degree": "Ph.D. in Computer Science",
-      "status": "Expected May 2026",
-      "start_date": "08/2021",
-      "end_date": "07/2026",
+      "status": "Expected December 2026",
+      "start_date": "August 2021",
+      "end_date": "December 2026",
       "gpa": "",
-      "courses": [
-        "Machine Learning",
-        "Deep Learning",
-        "Computer Vision",
-        "Information Retrieval",
-        "Data Mining",
-        "Algorithms",
-        "AI Ethics"
-      ],
-      "other_info": [
-        "Research focus: Large Language Models, Generative AI, Robust NLP, Causal Inference"
-      ],
+      "courses": [],
+      "other_info": ["Research focus: Large Language Models, Controllable Generation, Robust NLP, and Causal Inference"],
       "href": "https://www.uark.edu"
     },
     {
       "id": 2,
       "school": "University of Arkansas",
       "degree": "M.S. in Computer Science",
-      "status": "Completed",
-      "start_date": "08/2021",
-      "end_date": "12/2024",
+      "status": "Completed December 2024",
+      "start_date": "August 2021",
+      "end_date": "December 2024",
       "gpa": "",
-      "courses": [
-        "Machine Learning",
-        "Deep Learning",
-        "Computer Vision",
-        "Advanced Information Retrieval",
-        "Data Mining",
-        "Algorithms",
-        "AI Ethics"
-      ],
+      "courses": [],
       "other_info": [],
       "href": "https://www.uark.edu"
     },
     {
       "id": 3,
       "school": "Tribhuvan University",
-      "degree": "B.Sc. in Computer Science and Information Technology (BSc CSIT)",
-      "status": "Graduated",
+      "degree": "B.Sc. in Computer Science and Information Technology",
+      "status": "Completed 2019",
       "start_date": "2015",
       "end_date": "2019",
       "gpa": "",
-      "courses": [
-        "Data Structures and Algorithms",
-        "Artificial Intelligence",
-        "Database Management Systems",
-        "Operating Systems",
-        "Computer Networks",
-        "Software Engineering",
-        "Image Processing",
-        "Computer Graphics"
-      ],
+      "courses": [],
       "other_info": [],
-      "href": "https://tribhuvan-university.edu.np"
+      "href": "https://tu.edu.np"
     }
   ]
 }

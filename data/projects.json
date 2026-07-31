@@ -2,117 +2,210 @@
   "projects": [
     {
       "id": 1,
-      "title": "Market Brief Agents",
-      "subtitle": "Agentic market research-to-video pipeline",
-      "category": "AI Systems",
+      "slug": "tracelayer",
+      "title": "TraceLayer",
+      "subtitle": "Evidence-centered resume verification with stage-level evaluation",
+      "category": "Agentic AI",
       "year": "2026",
-      "lastUpdated": "June 2026",
-      "featured": true,
+      "lastUpdated": "July 2026",
+      "featuredRank": 1,
+      "caseStudy": true,
+      "visibility": "Private case study",
       "description": [
-        "Local-first AI engineering system that turns market events into evidence-grounded short-form financial briefings using source review, RAG retrieval, agent orchestration, and validation gates.",
-        "The public demo path uses synthetic data and deterministic fallbacks, with audit bundles, typed script manifests, a Streamlit operations dashboard, a Next.js shell, and Remotion rendering."
+        "A multi-stage system that converts resume claims into an auditable evidence map while preserving uncertainty, identity checks, and source-level provenance."
       ],
-      "image": "/images/market_brief_agents.png",
+      "image": "/images/blog/llm-agentic-ai-evaluation.png",
       "href": {
-        "Github": "https://github.com/zthsk/market-brief-agents"
+        "Evaluation article": "/blog/why-evaluation-matters-llm-agentic-ai"
       },
-      "technologies": ["Python", "RAG", "LangGraph", "Pydantic", "Streamlit", "Next.js", "Remotion"],
-      "status": "Active"
+      "technologies": ["Python", "FastAPI", "LangGraph", "RAG", "Pydantic", "LLM Evaluation"],
+      "status": "In development",
+      "role": "Designed and built the end-to-end verification workflow, deterministic identity gates, evidence promotion rules, runtime evaluation, and report pipeline.",
+      "problem": "Resume-screening systems can turn self-reported claims into polished summaries without showing whether the underlying evidence is relevant, attributable, or sufficient.",
+      "approach": [
+        "Decompose resumes into atomic claims with stable source anchors and explicit group membership.",
+        "Resolve candidate identity before public sources can enter the trusted evidence set.",
+        "Separate retrieval from evidence promotion so topical or wrong-person sources cannot influence verification.",
+        "Orchestrate the workflow as observable stages while keeping identity, budgets, and failure routing deterministic."
+      ],
+      "evaluation": [
+        "Test claim extraction, identity resolution, GitHub ownership, evidence linking, verification states, and end-to-end behavior independently.",
+        "Treat wrong-identity approvals and unsupported verified claims as hard-gate failures rather than average-quality tradeoffs.",
+        "Track search budgets, connector calls, latency, evidence coverage, and explicit abstention states."
+      ],
+      "outcomes": [
+        "Changed the architecture from output-first automation to promotion-only evidence flow with auditable failure states.",
+        "Created fixture-backed requirements for wrong-person blocking, unsupported-claim handling, and bounded search behavior."
+      ]
     },
     {
       "id": 2,
-      "title": "Hate Meme Detection",
-      "subtitle": "Multimodal BERT, ViT, fusion, and Gemini experiments",
-      "category": "Multimodal AI",
+      "slug": "market-brief-agents",
+      "title": "Market Brief Agents",
+      "subtitle": "Evidence-grounded market research-to-video pipeline",
+      "category": "AI Systems",
       "year": "2026",
-      "lastUpdated": "April 2026",
-      "featured": true,
+      "lastUpdated": "June 2026",
+      "featuredRank": 2,
+      "caseStudy": true,
+      "visibility": "Public repository",
       "description": [
-        "Reproducible research codebase for multimodal hate meme detection across text-only BERT, image-only Vision Transformer, ViT+BERT fusion, and Gemini prompting baselines.",
-        "Refactors experiment scripts into a package with shared data loading, configs, training loops, evaluation metrics, prompt templates, and smoke tests that run without private datasets or API calls."
+        "A local-first AI system that turns market events into reviewable short-form briefings using retrieval, agent orchestration, validation gates, and deterministic fallbacks."
       ],
-      "image": "/images/multimodal_hate_meme.png",
+      "image": "/images/market_brief_agents.png",
       "href": {
-        "Github": "https://github.com/zthsk/hatememe-classification"
+        "GitHub": "https://github.com/zthsk/market-brief-agents"
       },
-      "technologies": ["Python", "BERT", "Vision Transformer", "Gemini", "PyTorch", "Hugging Face"],
-      "status": "Completed"
+      "technologies": ["Python", "RAG", "LangGraph", "Pydantic", "Streamlit", "Next.js", "Remotion"],
+      "status": "Active",
+      "role": "Designed and implemented the local-first workflow, typed contracts, validation boundaries, operator dashboard, and deterministic public demo path.",
+      "problem": "Market brief generation can look convincing even when sources, claims, scripts, and rendered output drift apart across a long multi-agent workflow.",
+      "approach": [
+        "Review source material before retrieval and preserve provenance in audit bundles.",
+        "Use typed manifests to connect research, evidence, script generation, and video rendering.",
+        "Expose workflow state through a Streamlit operations view and a Next.js shell.",
+        "Render validated scripts through Remotion rather than handing unstructured text directly to video generation."
+      ],
+      "evaluation": [
+        "Apply validation gates at research, evidence, script, and render boundaries.",
+        "Keep synthetic fixtures and deterministic fallbacks so the public workflow can be exercised without paid APIs or live financial data.",
+        "Preserve audit artifacts so each generated claim can be traced to its reviewed inputs."
+      ],
+      "outcomes": [
+        "Produced a runnable reference architecture spanning orchestration, retrieval, operator review, and deterministic rendering.",
+        "Made failure states inspectable instead of hiding them behind a completed video artifact."
+      ]
     },
     {
       "id": 3,
+      "slug": "hate-meme-detection",
+      "title": "Hate Meme Detection",
+      "subtitle": "Reproducible multimodal BERT, ViT, fusion, and Gemini experiments",
+      "category": "Multimodal AI",
+      "year": "2026",
+      "lastUpdated": "April 2026",
+      "featuredRank": 3,
+      "caseStudy": true,
+      "visibility": "Public repository",
+      "description": [
+        "A reproducible experiment package for comparing text-only, image-only, multimodal fusion, and prompted-model baselines on hate meme detection."
+      ],
+      "image": "/images/multimodal_hate_meme.png",
+      "href": {
+        "GitHub": "https://github.com/zthsk/hatememe-classification"
+      },
+      "technologies": ["Python", "BERT", "Vision Transformer", "Gemini", "PyTorch", "Hugging Face"],
+      "status": "Completed",
+      "role": "Refactored disconnected experiments into a shared package with reusable data loading, configuration, training, evaluation, and prompting interfaces.",
+      "problem": "Multimodal baselines are difficult to compare when each experiment uses different preprocessing, training loops, metrics, and access assumptions.",
+      "approach": [
+        "Implement text-only BERT, image-only Vision Transformer, ViT+BERT fusion, and Gemini prompting baselines behind consistent workflows.",
+        "Share dataset handling, configuration, training loops, metrics, and prompt templates across experiments.",
+        "Separate private dataset requirements from public smoke-test fixtures and provider-free checks."
+      ],
+      "evaluation": [
+        "Compare unimodal, fusion, and prompted-model approaches through a common evaluation interface.",
+        "Use smoke tests that exercise package boundaries without private datasets or external model calls.",
+        "Keep experiment configuration explicit so results can be reproduced and reviewed."
+      ],
+      "outcomes": [
+        "Turned research scripts into a maintainable experiment package with consistent baselines.",
+        "Made the public repository runnable for structural validation without exposing private data."
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "semantic-resume-screening",
       "title": "Semantic Resume Screening / TalentAI",
       "subtitle": "Resume parsing and semantic candidate matching modules",
       "category": "Applied NLP",
       "year": "2025",
       "lastUpdated": "August 2025",
-      "featured": true,
+      "featuredRank": null,
+      "caseStudy": false,
+      "visibility": "Public repository",
       "description": [
-        "Standalone AI modules for resume parsing, candidate summarization, skill extraction, and job-candidate matching through semantic embeddings and hybrid ranking.",
-        "Includes FastAPI interfaces, command-line workflows, Groq and local LLM provider support, and a recommendation system built around Sentence-BERT similarity plus skill and title alignment."
+        "Standalone modules for resume parsing, skill extraction, candidate summarization, and hybrid semantic job matching with API and command-line interfaces."
       ],
       "image": "/images/llm_resume_screening.png",
       "href": {
-        "Github": "https://github.com/zthsk/semantic-resume-screening"
+        "GitHub": "https://github.com/zthsk/semantic-resume-screening"
       },
       "technologies": ["Python", "FastAPI", "Sentence-BERT", "LangChain", "Groq", "Pydantic"],
-      "status": "Completed"
+      "status": "Completed",
+      "role": "Built the standalone AI modules for parsing, semantic retrieval, skill matching, and title-aware ranking.",
+      "outcomes": ["Combined embedding similarity with skill and title alignment in reusable API and CLI workflows."]
     },
     {
-      "id": 4,
+      "id": 5,
+      "slug": "semantic-search-benchmarking",
       "title": "Semantic Search Benchmarking",
       "subtitle": "LSA, LDA, GloVe, and SBERT retrieval comparison",
       "category": "Information Retrieval",
       "year": "2023",
       "lastUpdated": "August 2025",
-      "featured": false,
+      "featuredRank": null,
+      "caseStudy": false,
+      "visibility": "Public repository",
       "description": [
-        "Benchmarking project comparing classical topic models and dense transformer embeddings for semantic search over MS MARCO-style document retrieval tasks.",
-        "Implements LSA, LDA, GloVe, and SBERT retrieval workflows with query scripts and evaluation metrics including precision, recall, F1, average precision, and MAP."
+        "Benchmarking workflows comparing classical topic models and dense transformer embeddings on MS MARCO-style retrieval tasks."
       ],
       "image": "/images/semantic_search.png",
       "href": {
-        "Github": "https://github.com/zthsk/semantic_search"
+        "GitHub": "https://github.com/zthsk/semantic_search"
       },
       "technologies": ["Python", "SBERT", "LDA", "LSA", "GloVe", "MS MARCO"],
-      "status": "Completed"
+      "status": "Completed",
+      "role": "Implemented comparable retrieval and evaluation workflows across sparse, topic-model, and dense approaches.",
+      "outcomes": ["Measured precision, recall, F1, average precision, and MAP through a shared benchmark workflow."]
     },
     {
-      "id": 5,
+      "id": 6,
+      "slug": "cebert",
       "title": "CEBERT",
       "subtitle": "Causal regularization for robust hate speech detection",
       "category": "Robust NLP",
       "year": "2022",
       "lastUpdated": "August 2025",
-      "featured": false,
+      "featuredRank": null,
+      "caseStudy": false,
+      "visibility": "Public repository",
       "description": [
-        "Official implementation of the AACL-IJCNLP 2022 paper on robust hate speech detection through mitigation of spurious correlations.",
-        "Uses a causal graph view of text classification and an entropy-regularized objective to improve robustness against word-level and character-level adversarial attacks."
+        "Official implementation of the AACL-IJCNLP 2022 paper using causal strength and entropy regularization to reduce spurious lexical correlations."
       ],
       "image": "/images/cebert.png",
       "href": {
-        "Github": "https://github.com/zthsk/CEBERT"
+        "GitHub": "https://github.com/zthsk/CEBERT",
+        "Paper": "https://aclanthology.org/2022.aacl-short.7/"
       },
       "technologies": ["Python", "BERT", "Causal NLP", "PyTorch", "Transformers"],
-      "status": "Published Research"
+      "status": "Published Research",
+      "role": "Co-developed the causal formulation, regularized training objective, and adversarial evaluation.",
+      "outcomes": ["Reached 85.9% and 86.0% accuracy on word-replaced and misspelled test sets, outperforming the strongest reported baselines."]
     },
     {
-      "id": 6,
+      "id": 7,
+      "slug": "mdl-mlm",
       "title": "MDL-MLM",
       "subtitle": "Minimum description length analysis for adversarial NLP",
       "category": "Causal NLP",
       "year": "2024",
       "lastUpdated": "August 2025",
-      "featured": false,
+      "featuredRank": null,
+      "caseStudy": false,
+      "visibility": "Public repository",
       "description": [
-        "Official repository for the Entropy 2024 article studying implications of minimum description length for adversarial attacks in natural language processing.",
-        "Provides workflows for perturbation data preparation, masked language model fine-tuning, fill-mask generation, and MDL computation across causal and anticausal directions."
+        "Official repository for the Entropy 2024 article using masked language modeling and description length to detect adversarial manipulation."
       ],
       "image": "/images/mdl_mlm.png",
       "href": {
-        "Github": "https://github.com/zthsk/MDL-MLM"
+        "GitHub": "https://github.com/zthsk/MDL-MLM",
+        "Paper": "https://www.mdpi.com/1099-4300/26/5/354"
       },
       "technologies": ["Python", "Masked LM", "MDL", "PyTorch", "Transformers"],
-      "status": "Published Research"
+      "status": "Published Research",
+      "role": "Developed data preparation, masked-language-model, perturbation, and description-length analysis workflows.",
+      "outcomes": ["Established an information-theoretic signal for detecting adversarially altered tokens without access to the original text."]
     }
   ]
 }

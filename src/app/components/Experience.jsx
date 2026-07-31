@@ -1,22 +1,19 @@
-import experience from '../../../data/experience.json';
-import React from "react";
+import experience from "../../../data/experience.json";
 import ExperienceCard from "./ExperienceCard";
-
 
 export default function Experience() {
     return (
-        <div className="w-full mb-12">
-            <div className="font-display text-3xl font-medium tracking-normal mb-6 text-zinc-50 md:text-4xl">
-                Experience
+        <section>
+            <div className="mb-6">
+                <p className="mb-2 font-mono text-xs font-semibold uppercase tracking-[0.16em] text-cyan-300">Technical experience</p>
+                <h1 className="font-display text-4xl font-medium text-zinc-50 md:text-5xl">Experience</h1>
+                <p className="mt-4 max-w-3xl text-sm leading-7 text-zinc-400 md:text-base">
+                    Research engineering work centered on controllable language models, adversarial robustness, and evaluation systems.
+                </p>
             </div>
-            <p className="text-sm text-zinc-400 mb-4">
-                Research, teaching, and leadership roles that shaped my work in machine learning and NLP.
-            </p>
-            <div>
-                {experience.job.map((item) => (
-                    <ExperienceCard key={item.id} item={item}/>
-                ))}
+            <div className="space-y-5">
+                {experience.job.map((item) => <ExperienceCard key={item.id} item={item}/>) }
             </div>
-        </div>
+        </section>
     );
 }

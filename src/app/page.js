@@ -1,46 +1,54 @@
-import React from "react";
-
 import Content from "@/app/components/Content";
-import Greetings from "@/app/components/Greetings";
 import NameCard from "@/app/components/NameCard";
-import News from "@/app/components/News";
-import About from "@/app/components/About";
-import LinkSection from "@/app/components/LinkSection";
+import CredibilityStrip from "@/app/components/CredibilityStrip";
 import {FeaturedProjects} from "@/app/components/Projects";
+import {SelectedPublications} from "@/app/components/Publications";
 import {LatestBlogPosts} from "@/app/components/Blog";
+import About from "@/app/components/About";
 import {getAllBlogPosts} from "@/lib/blog";
-
-import personalInfo from '../../data/personalInfo.json';
-import news from '../../data/news.json'
+import personalInfo from "../../data/personalInfo.json";
 
 export const metadata = {
-    title: personalInfo.name + "'s Portfolio",
+    title: {absolute: `${personalInfo.name} | AI Research Engineer`},
     description: personalInfo.site_description,
-    alternates: {
-        canonical: "/",
-    },
+    alternates: {canonical: "/"},
 };
 
 export default function Home() {
     const latestBlogPosts = getAllBlogPosts();
+    const personJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: personalInfo.name,
+        url: "https://kshitiztiwari.com",
+        image: "https://kshitiztiwari.com/images/avatar.jpeg",
+        email: `mailto:${personalInfo.email}`,
+        jobTitle: "AI Research Engineer",
+        affiliation: {
+            "@type": "CollegeOrUniversity",
+            name: personalInfo.work_place,
+            url: personalInfo.work_place_url,
+        },
+        sameAs: [
+            personalInfo.social_media.linkedin,
+            personalInfo.social_media.github,
+            personalInfo.social_media.google_scholar,
+        ].filter(Boolean),
+        knowsAbout: personalInfo.research_interests,
+    };
 
     return (
         <Content>
-            {personalInfo.greetings_on_homepage &&
-                <Greetings greetings_on_homepage={personalInfo.greetings_on_homepage}/>}
-
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{__html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c")}}
+            />
             <NameCard/>
-
+            <CredibilityStrip/>
             <FeaturedProjects/>
-
+            <SelectedPublications/>
             <LatestBlogPosts posts={latestBlogPosts}/>
-
-            {news.news.length > 0 && <News/>}
-
-            <LinkSection/>
-
-            {personalInfo.self_description_detail.length > 0 && <About/>}
-
+            <About/>
         </Content>
     );
 }

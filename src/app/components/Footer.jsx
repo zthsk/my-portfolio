@@ -1,23 +1,23 @@
-"use client";
+import Link from "next/link";
+import SocialMedia from "./SocialMedia";
+import personalInfo from "../../../data/personalInfo.json";
 
-import SocialMedia from './SocialMedia';
-import personalInfo from '../../../data/personalInfo.json';
-
-function Footer() {
-
+export default function Footer() {
     return (
-        <footer className="w-full border-t border-zinc-800/80 mt-4">
-            <div
-                className="mb-9 pb-0 px-6 max-w-5xl w-full flex flex-col-reverse md:flex-row items-center justify-between text-sm text-zinc-500 m-auto pt-10">
-                <p className="mt-4 md:mt-0">
-                    &copy; {new Date().getFullYear()}. {personalInfo.name}
-                </p>
-                <div className="mb-4 md:mb-0">
+        <footer className="mt-6 w-full border-t border-zinc-800/80">
+            <div className="mx-auto flex w-full max-w-5xl flex-col gap-6 px-5 py-10 text-sm text-zinc-400 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                    <p>&copy; {new Date().getFullYear()} {personalInfo.name}</p>
+                    <p className="mt-1">AI research, engineered for real systems.</p>
+                </div>
+                <div className="flex flex-col items-start gap-4 sm:items-end">
                     <SocialMedia/>
+                    <div className="flex gap-4">
+                        <Link href="/projects" className="transition-colors hover:text-cyan-200">Selected work</Link>
+                        <a href={`mailto:${personalInfo.email}`} className="transition-colors hover:text-cyan-200">Contact</a>
+                    </div>
                 </div>
             </div>
         </footer>
     );
 }
-
-export default Footer;

@@ -3,7 +3,7 @@ import Publications from "@/app/components/Publications";
 import personalInfo from "../../../data/personalInfo.json";
 
 export const metadata = {
-    title: `Publications | ${personalInfo.name}`,
+    title: "Publications",
     description: `Selected publications and manuscripts by ${personalInfo.name}.`,
     alternates: {
         canonical: "/publications",

@@ -1,20 +1,25 @@
 {
   "publications": [
     {
+      "id": "3",
+      "href": "",
+      "year": "2026",
+      "summary": "A geometric framework for controlling stylistic attributes in language-model representations while preserving semantic content.",
+      "contribution": "Combines contrastive objectives, identity-preserving constraints, and semantic regularization for representation-level intervention.",
+      "result": "Manuscript in preparation; evaluation covers attribute control, semantic preservation, representation geometry, and LLM-based judgment.",
+      "keywords": ["Large Language Models", "Controllable Generation", "Representation Learning", "Causal NLP"],
+      "citation": "Tiwari, K., Zhang, L. Counterfactual Text Generation via Geometric Style Control in Large Language Models.",
+      "bold_name": "Tiwari, K.",
+      "status": "In preparation"
+    },
+    {
       "id": "1",
       "href": "https://www.mdpi.com/1099-4300/26/5/354",
       "year": "2024",
-      "abstract": [
-        "This work studies adversarial robustness in natural language processing from an information-theoretic perspective. Instead of directly modeling adversarial perturbations, the approach treats the attack process as a complex causal mechanism and quantifies its algorithmic information using the Minimum Description Length (MDL) framework.",
-        "Using masked language modeling, the method estimates the amount of information required to transform an original text into its adversarially modified version. This signal can then be used to identify altered tokens and detect adversarial manipulation even without access to the original text."
-      ],
-      "keywords": [
-        "Adversarial NLP",
-        "Minimum Description Length",
-        "Causal Inference",
-        "Robust NLP",
-        "Language Models"
-      ],
+      "summary": "Studies adversarial NLP through the Minimum Description Length principle rather than directly modeling every perturbation strategy.",
+      "contribution": "Uses masked language modeling to estimate the information required to transform original text into an adversarial variant.",
+      "result": "Provides a signal for detecting altered tokens and adversarial manipulation without access to the original input.",
+      "keywords": ["Adversarial NLP", "Minimum Description Length", "Causal Inference", "Robust NLP"],
       "citation": "Tiwari, K., Zhang, L. (2024). Implications of Minimum Description Length for Adversarial Attack in Natural Language Processing. Entropy, 26(5), 354.",
       "bold_name": "Tiwari, K.",
       "status": "Published"
@@ -23,39 +28,13 @@
       "id": "2",
       "href": "https://aclanthology.org/2022.aacl-short.7/",
       "year": "2022",
-      "abstract": [
-        "This work proposes a robust hate speech detection model that mitigates spurious correlations between lexical cues and prediction labels. Traditional classifiers often rely on superficial correlations, making them vulnerable to adversarial word or character perturbations.",
-        "The proposed method formulates hate speech detection using a causal graph and quantifies spurious correlations through causal strength. A regularized entropy loss function is then introduced to reduce reliance on these correlations, improving robustness against adversarial attacks."
-      ],
-      "keywords": [
-        "Hate Speech Detection",
-        "Causal Inference",
-        "Adversarial Robustness",
-        "Robust NLP",
-        "Text Classification"
-      ],
-      "citation": "Tiwari, K., Yuan, S., Zhang, L. (2022). Robust Hate Speech Detection via Mitigating Spurious Correlations. Proceedings of AACL-IJCNLP 2022 (Short Papers), 51–56.",
+      "summary": "Introduces CEBERT, a causal-regularization approach that reduces reliance on spurious lexical correlations in hate speech detection.",
+      "contribution": "Models hate speech classification with a causal graph and integrates causal strength into a regularized entropy objective.",
+      "result": "Reached 85.9% accuracy under word replacement and 86.0% under misspelling attacks, above the strongest reported baselines of 70.3% and 73.7%.",
+      "keywords": ["Hate Speech Detection", "Causal Inference", "Adversarial Robustness", "Text Classification"],
+      "citation": "Tiwari, K., Yuan, S., Zhang, L. (2022). Robust Hate Speech Detection via Mitigating Spurious Correlations. Proceedings of AACL-IJCNLP 2022 (Short Papers), 51-56.",
       "bold_name": "Tiwari, K.",
       "status": "Published"
-    },
-    {
-      "id": "3",
-      "href": "",
-      "year": "2026",
-      "abstract": [
-        "This ongoing research investigates counterfactual text generation in large language models through structured representation-level interventions. The work explores how stylistic attributes can be modeled as directional structures in latent embedding space, enabling controlled modification of attributes such as writing style while preserving semantic meaning.",
-        "The proposed framework integrates contrastive learning, semantic regularization, and identity-preserving constraints to guide latent representations toward target attribute anchors while minimizing semantic drift. Extensive evaluation using automatic metrics, LLM-based judges, and geometric analysis is used to study controllable attribute manipulation in language models."
-      ],
-      "keywords": [
-        "Large Language Models",
-        "Counterfactual Generation",
-        "Controllable Text Generation",
-        "Representation Learning",
-        "Causal NLP"
-      ],
-      "citation": "Tiwari, K., Zhang, L. Counterfactual Text Generation via Geometric Style Control in Large Language Models.",
-      "bold_name": "Tiwari, K.",
-      "status": "Manuscript in Preparation"
     }
   ]
 }

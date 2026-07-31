@@ -12,16 +12,17 @@ Compared to the original template, this version includes several changes and add
   - Restyled navigation bar (sticky, glassmorphism, pill-shaped links).
   - Modernized cards for hero, experience, research, projects, and publications.
 - **Project & research UX**
-  - Added **status tags** for projects (e.g., In progress, Completed).
-  - Added **technology / keyword chips** for projects, research, and publications.
-  - Keyword/tech‑based **filters** on the Projects and Research pages.
+  - Added three detailed, data-driven project case studies with consistent evidence sections.
+  - Added visibility, role, evaluation, outcome, and evidence metadata to project records.
+  - Kept the remaining projects and research questions compact for faster scanning.
 - **Layout & content structure**
-  - Two‑column layout for projects on larger screens.
-  - Short section intros for Experience, Research, and Publications.
-  - Improved hero card with a “Let’s talk” contact button and clearer research‑interest chips.
-  - Markdown-backed blog section with a homepage latest-writing preview.
+  - Reorganized the homepage around positioning, credibility, selected work, publications, writing, and contact.
+  - Added responsive project case-study routes and connected relevant articles to their systems.
+  - Reworked experience and education around ownership, outcomes, and current status.
+  - Kept the Markdown-backed blog with a homepage latest-writing preview.
 - **Meta / SEO**
-  - Updated site metadata and Open Graph configuration to point to `kshitiztiwari.com`.
+  - Added page-specific metadata, Person structured data, a dynamic sitemap, and a dedicated 1200×630 social card.
+  - Added a generated one-page PDF CV and source script under `scripts/build_cv.py`.
 
 The sections below (data format, how to modify JSON, etc.) are largely preserved from the original template so that users can still follow the same configuration model.
 
@@ -188,10 +189,17 @@ To modify the projects section, open the `projects.json` file in the `data` fold
 | Field Name    | Type            | Description                                                                                                                             |
 |---------------|-----------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 | `id`          | Integer         | A unique identifier for the project entry.                                                                                              |
-| `title`       | String          | The title of the project, e.g., "Machine Learning for Drug Discovery".                                                                  |
-| `description` | Array of Strings | A list of paragraphs describing the project. Each string in the array represents a separate paragraph.                                   |
-| `image`       | String (URL)    | A URL or path to an image associated with the project. If no image is provided, this field may be an empty string.                      |
-| `href`        | Object          | A dictionary containing key-value pairs where the key is the type of link (e.g., "Github", "Demo", "File") and the value is the corresponding URL. |
+| `slug`        | String          | The stable URL segment used by a detailed case study.                                                                                   |
+| `featuredRank`| Integer or null | The homepage order for featured case studies; use `null` for compact project cards.                                                     |
+| `visibility`  | String          | Whether the work is public, private, or otherwise access-limited.                                                                       |
+| `title`       | String          | The project name, e.g., "Machine Learning for Drug Discovery".                                                                         |
+| `role`        | String          | A concise statement of personal ownership and contribution.                                                                             |
+| `problem`     | String          | The user, research, or engineering problem the system addresses.                                                                        |
+| `approach`    | Array of Strings | The core system-design decisions and implementation details.                                                                            |
+| `evaluation`  | Array of Strings | How the system or model was assessed.                                                                                                    |
+| `outcomes`    | Array of Strings | Verified results; do not add unconfirmed metrics.                                                                                        |
+| `image`       | String (URL)    | A URL or path to an image associated with the project.                                                                                   |
+| `href`        | Object          | Validated evidence links. Empty values are never rendered as actions.                                                                   |
 
 ### Research
 

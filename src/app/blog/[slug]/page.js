@@ -10,8 +10,9 @@ export function generateStaticParams() {
     }));
 }
 
-export function generateMetadata({params}) {
-    const post = getBlogPostBySlug(params.slug);
+export async function generateMetadata({params}) {
+    const {slug} = await params;
+    const post = getBlogPostBySlug(slug);
 
     if (!post) {
         return {};
@@ -29,7 +30,7 @@ export function generateMetadata({params}) {
         : undefined;
 
     return {
-        title: `${post.title} | ${personalInfo.name}`,
+        title: post.title,
         description: post.excerpt,
         alternates: {
             canonical: `/blog/${post.slug}`,
@@ -52,8 +53,9 @@ export function generateMetadata({params}) {
     };
 }
 
-export default function Page({params}) {
-    const post = getBlogPostBySlug(params.slug);
+export default async function Page({params}) {
+    const {slug} = await params;
+    const post = getBlogPostBySlug(slug);
 
     if (!post) {
         notFound();

@@ -2,91 +2,48 @@
   "research": [
     {
       "id": 1,
-      "research_name": "Counterfactual Text Generation via Geometric Style Control in Large Language Models",
-      "company": [
-        "University of Arkansas"
-      ],
-      "instructor": [
-        "Dr. Lu Zhang"
-      ],
-      "project": "Counterfactual Text Generation",
+      "research_name": "Counterfactual Text Generation via Geometric Style Control",
+      "company": ["University of Arkansas"],
+      "instructor": ["Dr. Lu Zhang"],
       "collaborators": [],
-      "abstract": [
-        "This research investigates controllable counterfactual text generation in large language models by modeling stylistic attributes as directional structures in latent representation space. Instead of relying solely on prompt-based control, the work introduces a geometric framework that performs structured representation-level interventions to modify attributes such as writing style while preserving semantic content.",
-        "The proposed approach integrates contrastive objectives, identity-preserving constraints, and semantic regularization to guide latent representations toward target stylistic anchors while minimizing semantic drift. Extensive evaluation using automatic metrics, LLM-based judges, and geometric analysis demonstrates that stylistic transformations can be interpreted as controlled movements along attribute directions in embedding space."
-      ],
-      "keywords": [
-        "Large Language Models",
-        "Counterfactual Generation",
-        "Controllable Text Generation",
-        "Representation Learning",
-        "Causal NLP"
-      ],
-      "href": {
-        "Github": "",
-        "File": ""
-      },
-      "status": "Ongoing"
+      "summary": "Models stylistic attributes as directional structures in language-model representation space, enabling targeted intervention without relying only on prompt-level control.",
+      "contribution": "Develops contrastive, identity-preserving, and semantic objectives that move representations toward target style anchors while limiting semantic drift.",
+      "result": "Current evaluation combines attribute classifiers, embedding similarity, BERTScore, LLM-based judges, and geometric analysis.",
+      "keywords": ["Large Language Models", "Controllable Generation", "Representation Learning", "Causal NLP"],
+      "href": {},
+      "status": "In preparation"
     },
     {
       "id": 2,
-      "research_name": "Detecting Adversarial Attacks in NLP using Minimum Description Length",
-      "company": [
-        "University of Arkansas"
-      ],
-      "instructor": [
-        "Dr. Lu Zhang"
-      ],
-      "project": "MDL-based Adversarial Detection",
+      "research_name": "Adversarial Detection with Minimum Description Length",
+      "company": ["University of Arkansas"],
+      "instructor": ["Dr. Lu Zhang"],
       "collaborators": [],
-      "abstract": [
-        "This research explores the use of the Minimum Description Length (MDL) principle to detect adversarial attacks in natural language processing systems. Adversarial attacks often introduce subtle perturbations that change model predictions while preserving human readability.",
-        "The proposed framework estimates the algorithmic information content of text using masked language modeling and analyzes how adversarial perturbations alter the description length of sentences. The approach provides a principled information-theoretic signal for detecting adversarial manipulation in NLP systems."
-      ],
-      "keywords": [
-        "Adversarial NLP",
-        "Minimum Description Length",
-        "Robust Machine Learning",
-        "Information Theory",
-        "Large Language Models",
-        "Causal Inference",
-        "Causal NLP"
-      ],
+      "summary": "Treats adversarial transformation as a complex causal mechanism and measures how perturbations change the information required to describe a sentence.",
+      "contribution": "Builds masked-language-model workflows for perturbation preparation, fill-mask generation, and description-length comparison.",
+      "result": "Published in Entropy 26(5), 354; the method detects adversarial manipulation without requiring the original text at inference time.",
+      "keywords": ["Adversarial NLP", "Minimum Description Length", "Information Theory", "Causal NLP"],
       "href": {
-        "Github": "https://github.com/zthsk/MDL-MLM",
-        "File": "https://www.mdpi.com/1099-4300/26/5/354"
+        "GitHub": "https://github.com/zthsk/MDL-MLM",
+        "Paper": "https://www.mdpi.com/1099-4300/26/5/354"
       },
-      "status": "Published (Entropy 2024)"
+      "status": "Published · Entropy 2024"
     },
     {
       "id": 3,
       "research_name": "Robust Hate Speech Detection via Mitigating Spurious Correlations",
-      "company": [
-        "University of Arkansas"
-      ],
-      "instructor": [
-        "Dr. Lu Zhang"
-      ],
-      "project": "CEBERT",
+      "company": ["University of Arkansas"],
+      "instructor": ["Dr. Lu Zhang"],
       "collaborators": ["Dr. Shuhan Yuan"],
-      "abstract": [
-        "This work proposes CEBERT, a robust hate speech detection framework designed to mitigate spurious correlations in text classification models. Traditional models often rely on superficial lexical cues that lead to poor generalization and vulnerability to adversarial manipulation.",
-        "The proposed approach introduces a causal graph formulation and entropy-based regularization to encourage models to focus on causal linguistic signals rather than spurious patterns. Experiments demonstrate improved robustness against adversarial word and character perturbations while maintaining strong predictive performance."
-      ],
-      "keywords": [
-        "Robust NLP",
-        "Large Language Models",
-        "Hate Speech Detection",
-        "Causal Inference",
-        "Causal NLP",
-        "Adversarial Robustness",
-        "Text Classification"
-      ],
+      "summary": "Uses a causal graph to explain how lexical cues create spurious shortcuts and make classifiers vulnerable to word- and character-level attacks.",
+      "contribution": "Introduces a causal-strength regularizer that trades a small amount of clean-set utility for substantially stronger adversarial robustness.",
+      "result": "CEBERT achieved 85.9% accuracy on word-replaced data and 86.0% on misspelled data, compared with the strongest reported baselines at 70.3% and 73.7%.",
+      "keywords": ["Robust NLP", "Hate Speech Detection", "Causal Inference", "Adversarial Robustness"],
       "href": {
-        "Github": "https://github.com/zthsk/CEBERT",
-        "File": "https://aclanthology.org/2022.aacl-short.7"
+        "GitHub": "https://github.com/zthsk/CEBERT",
+        "Paper": "https://aclanthology.org/2022.aacl-short.7/"
       },
-      "status": "Published (AACL-IJCNLP 2022)"
+      "status": "Published · AACL-IJCNLP 2022"
     }
   ]
 }

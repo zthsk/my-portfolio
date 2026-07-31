@@ -1,28 +1,43 @@
 {
   "name": "Kshitiz Tiwari",
-  "domain": "github.com",
+  "domain": "kshitiztiwari.com",
   "email": "ktiwar@uark.edu",
+  "location": "Fayetteville, Arkansas",
   "work_place": "University of Arkansas",
   "work_place_url": "https://www.uark.edu",
-  "site_description": "Personal website of Kshitiz Tiwari — PhD researcher seeking AI Engineer, ML Engineer, and NLP roles.",
-  "greetings_on_homepage": "Welcome!",
-  "self_description_brief": "PhD Candidate in Computer Science building LLM, NLP, and ML systems for AI engineering roles",
+  "headline": "AI Research Engineer building reliable LLM and NLP systems.",
+  "availability": "PhD Candidate in Computer Science, expected December 2026, seeking AI Engineer, ML Engineer, NLP Engineer, and research-engineering roles.",
+  "site_description": "AI Research Engineer and PhD Candidate Kshitiz Tiwari builds reliable LLM, NLP, retrieval, and evaluation systems.",
+  "greetings_on_homepage": "",
+  "self_description_brief": "I turn research ideas into inspectable AI systems—from retrieval and agent orchestration to model training, evaluation, and robust NLP.",
   "self_description_detail": [
-    "Hello! I am Kshitiz Tiwari, a PhD Candidate in Computer Science at the University of Arkansas specializing in Natural Language Processing, Large Language Models, and Causal Inference. I am actively looking for AI Engineer, Machine Learning Engineer, and NLP-focused roles where I can start the next phase of my career after completing my PhD.",
-    "I am strongest at turning research ideas into working AI systems: building NLP pipelines, designing retrieval-augmented generation workflows, training and evaluating transformer models, creating semantic search and ranking systems, and writing reproducible research code that can be tested, inspected, and extended.",
-    "My research focuses on controllable, robust, and interpretable language models. I work on counterfactual text generation, causal NLP, adversarial robustness, representation learning, and methods that help language models change targeted attributes while preserving meaning.",
-    "I have published research on robust NLP systems and adversarial resilience, including work presented at AACL-IJCNLP and in the Entropy journal. I also build applied AI projects involving LLM orchestration, semantic embeddings, multimodal modeling, candidate ranking, and evidence-grounded retrieval systems.",
-    "On the engineering side, I am comfortable with Python, PyTorch, Hugging Face Transformers, Sentence-BERT, FastAPI, vector search, data processing, evaluation workflows, and the practical pieces needed to move from experiments to usable tools.",
-    "I am especially interested in teams working on applied LLM systems, NLP products, information retrieval, trustworthy AI, and ML infrastructure. If you are hiring for AI Engineer, ML Engineer, NLP Engineer, or Applied Scientist roles, I would be happy to connect."
+    "I am a PhD Candidate in Computer Science at the University of Arkansas, expected to graduate in December 2026. My work sits between AI research and engineering: I build reproducible LLM, NLP, retrieval, and evaluation systems that make model behavior easier to test and trust.",
+    "My research focuses on controllable generation, causal NLP, and adversarial robustness. I am seeking AI Engineer, ML Engineer, NLP Engineer, and research-engineering roles where I can translate rigorous experiments into dependable products."
   ],
   "cv_link": "/cv.pdf",
   "research_interests": [
-    "Large Language Models",
-    "Natural Language Processing",
-    "Causal Inference in Machine Learning",
-    "Controllable Text Generation",
-    "Robust and Fair AI",
-    "Representation Learning"
+    "LLM Evaluation",
+    "RAG & Retrieval",
+    "Robust NLP",
+    "Controllable Generation"
+  ],
+  "proof_points": [
+    {
+      "value": "2",
+      "label": "peer-reviewed publications"
+    },
+    {
+      "value": "6",
+      "label": "public AI & NLP projects"
+    },
+    {
+      "value": "Dec 2026",
+      "label": "expected PhD completion"
+    },
+    {
+      "value": "Python · PyTorch",
+      "label": "core engineering stack"
+    }
   ],
   "social_media": {
     "linkedin": "https://www.linkedin.com/in/zthsk/",

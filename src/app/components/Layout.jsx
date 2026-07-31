@@ -1,35 +1,12 @@
-"use client";
+import Header from "./Header";
+import Footer from "./Footer";
 
-import {useState, useEffect} from 'react';
-import {useScrollPosition} from '@n8tb1t/use-scroll-position';
-
-import Header from './Header';
-import Footer from './Footer';
-
-
-function Layout({children}) {
-    const [mounted, setMounted] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
-
-    useScrollPosition(({currPos}) => {
-        if (currPos.y <= -20) {
-            setScrolled(true);
-        } else {
-            setScrolled(false);
-        }
-    }, [scrolled]);
-
+export default function Layout({children}) {
     return (
-        <div className="w-full">
-            <Header scrolled={scrolled}/>
+        <div className="min-h-screen w-full">
+            <Header/>
             {children}
             <Footer/>
         </div>
     );
 }
-
-export default Layout;

@@ -18,7 +18,7 @@ export function BlogIndex({posts}) {
                         Posts on applied AI systems, NLP, hiring infrastructure, and evidence-driven software.
                     </p>
                 </div>
-                <p className="text-sm text-zinc-500">
+                <p className="text-sm text-zinc-400">
                     {posts.length} {posts.length === 1 ? "post" : "posts"}
                 </p>
             </div>
@@ -75,6 +75,10 @@ export function LatestBlogPosts({posts}) {
 }
 
 export function BlogArticle({post}) {
+    const relatedCaseStudy = post.slug === "why-evaluation-matters-llm-agentic-ai"
+        ? {href: "/projects/tracelayer", title: "TraceLayer case study"}
+        : null;
+
     return (
         <article className="mx-auto w-full max-w-5xl">
             <Link
@@ -109,7 +113,7 @@ export function BlogArticle({post}) {
                     </p>
                 )}
 
-                <PostMeta post={post} className="mt-5 text-zinc-500"/>
+                <PostMeta post={post} className="mt-5 text-zinc-400"/>
 
                 {post.image && (
                     <div className="relative mt-8 aspect-[1200/630] w-full overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950 shadow-lg shadow-black/20">
@@ -126,6 +130,18 @@ export function BlogArticle({post}) {
             </header>
 
             <div className="mx-auto mt-8 w-full max-w-3xl space-y-5 text-zinc-300">
+                {relatedCaseStudy && (
+                    <aside className="mb-8 rounded-xl border border-cyan-400/25 bg-cyan-400/5 p-5">
+                        <p className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-cyan-300">Related system</p>
+                        <p className="mt-2 text-sm leading-6 text-zinc-300">
+                            See the condensed system design, evaluation gates, and outcomes behind this article.
+                        </p>
+                        <Link href={relatedCaseStudy.href} className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-cyan-200 hover:text-cyan-100">
+                            {relatedCaseStudy.title}
+                            <FontAwesomeIcon icon={faArrowRight} className="text-xs"/>
+                        </Link>
+                    </aside>
+                )}
                 {post.blocks.map((block, index) => renderBlock(block, index))}
             </div>
         </article>
@@ -165,7 +181,7 @@ function CompactBlogCard({post}) {
                 )}
 
                 <div className="flex flex-1 flex-col p-4">
-                    <PostMeta post={post} className="mb-3 text-zinc-500"/>
+                    <PostMeta post={post} className="mb-3 text-zinc-400"/>
 
                     <h2 className="font-display text-xl font-medium leading-tight tracking-normal text-zinc-50 transition-colors group-hover:text-cyan-100">
                         {post.title}
@@ -207,7 +223,7 @@ function BlogListCard({post}) {
                 )}
 
                 <div className="flex flex-1 flex-col p-5">
-                    <PostMeta post={post} className="mb-3 text-zinc-500"/>
+                    <PostMeta post={post} className="mb-3 text-zinc-400"/>
 
                     <h2 className="font-display text-2xl font-medium leading-tight tracking-normal text-zinc-50 transition-colors group-hover:text-cyan-100 md:text-3xl">
                         {post.title}

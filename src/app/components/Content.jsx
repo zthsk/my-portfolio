@@ -1,16 +1,11 @@
-"use client";
-
 import Layout from "./Layout";
-import personalInfo from '../../../data/personalInfo.json';
 
-function Content({children }) {
+export default function Content({children}) {
     return (
-        <Layout personalInfo={personalInfo}>
-            <main className="flex flex-col max-w-5xl w-full mx-auto px-5 py-8 md:py-14 gap-9 leading-relaxed animate-fade-in-up">
+        <Layout>
+            <main id="main-content" className="mx-auto flex w-full max-w-5xl flex-col gap-14 px-5 py-10 leading-relaxed md:gap-20 md:py-16">
                 {children}
             </main>
         </Layout>
     );
 }
-
-export default Content;
