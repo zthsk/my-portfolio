@@ -293,7 +293,7 @@ function renderBlock(block, index) {
         return (
             <ul key={`list-${index}`} className="list-disc space-y-2 pl-6 text-sm leading-7 text-zinc-300 md:text-base">
                 {block.items.map((item) => (
-                    <li key={item}>{item}</li>
+                    <li key={item}>{renderInlineMarkdown(item)}</li>
                 ))}
             </ul>
         );
@@ -301,7 +301,50 @@ function renderBlock(block, index) {
 
     return (
         <p key={`paragraph-${index}`} className="text-sm leading-7 text-zinc-300 md:text-base">
-            {block.text}
+            {renderInlineMarkdown(block.text)}
         </p>
     );
+}
+
+function renderInlineMarkdown(text) {
+    const tokenPattern = /(\[[^\]]+\]\((?:https?:\/\/|\/)[^)\s]+\)|`[^`]+`|\*\*[^*]+\*\*)/g;
+
+    return text.split(tokenPattern).filter(Boolean).map((part, index) => {
+        const linkMatch = part.match(/^\[([^\]]+)\]\(((?:https?:\/\/|\/)[^)\s]+)\)$/);
+
+        if (linkMatch) {
+            const [, label, href] = linkMatch;
+            const className = "font-medium text-cyan-200 underline decoration-cyan-400/40 underline-offset-4 transition-colors hover:text-cyan-100";
+
+            if (href.startsWith("/")) {
+                return <Link key={`${href}-${index}`} href={href} className={className}>{label}</Link>;
+            }
+
+            return (
+                <a
+                    key={`${href}-${index}`}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={className}
+                >
+                    {label}
+                </a>
+            );
+        }
+
+        if (part.startsWith("`") && part.endsWith("`")) {
+            return (
+                <code key={`code-${index}`} className="rounded bg-zinc-900 px-1.5 py-0.5 font-mono text-[0.9em] text-cyan-100">
+                    {part.slice(1, -1)}
+                </code>
+            );
+        }
+
+        if (part.startsWith("**") && part.endsWith("**")) {
+            return <strong key={`strong-${index}`} className="font-semibold text-zinc-100">{part.slice(2, -2)}</strong>;
+        }
+
+        return part;
+    });
 }
