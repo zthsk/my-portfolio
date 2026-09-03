@@ -158,6 +158,30 @@ function parseMarkdownBlocks(content) {
             continue;
         }
 
+        const referenceMatch = line.match(/^\[\^(\d+)\]:\s+(.+)$/);
+
+        if (referenceMatch) {
+            const items = [];
+
+            while (index < lines.length) {
+                const currentLine = lines[index].trim();
+                const currentReferenceMatch = currentLine.match(/^\[\^(\d+)\]:\s+(.+)$/);
+
+                if (!currentReferenceMatch) {
+                    break;
+                }
+
+                items.push({
+                    id: currentReferenceMatch[1],
+                    text: currentReferenceMatch[2],
+                });
+                index += 1;
+            }
+
+            blocks.push({type: "references", items});
+            continue;
+        }
+
         if (line.startsWith("- ")) {
             const items = [];
 
@@ -178,6 +202,7 @@ function parseMarkdownBlocks(content) {
             if (
                 !currentLine ||
                 currentLine.startsWith("- ") ||
+                currentLine.match(/^\[\^\d+\]:\s+/) ||
                 currentLine.match(/^(#{2,4})\s+/)
             ) {
                 break;

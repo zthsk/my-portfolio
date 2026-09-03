@@ -299,6 +299,25 @@ function renderBlock(block, index) {
         );
     }
 
+    if (block.type === "references") {
+        return (
+            <ol key={`references-${index}`} className="list-none space-y-4 text-sm leading-6 text-zinc-400 md:text-base md:leading-7">
+                {block.items.map((item) => (
+                    <li
+                        key={item.id}
+                        id={`reference-${item.id}`}
+                        className="grid scroll-mt-24 grid-cols-[auto_1fr] gap-3"
+                    >
+                        <span className="font-mono text-xs font-semibold text-cyan-300 md:pt-0.5">
+                            [{item.id}]
+                        </span>
+                        <span>{renderInlineMarkdown(item.text)}</span>
+                    </li>
+                ))}
+            </ol>
+        );
+    }
+
     return (
         <p key={`paragraph-${index}`} className="text-sm leading-7 text-zinc-300 md:text-base">
             {renderInlineMarkdown(block.text)}
@@ -307,9 +326,27 @@ function renderBlock(block, index) {
 }
 
 function renderInlineMarkdown(text) {
-    const tokenPattern = /(\[[^\]]+\]\((?:https?:\/\/|\/)[^)\s]+\)|`[^`]+`|\*\*[^*]+\*\*)/g;
+    const tokenPattern = /(\[\^\d+\]|\[[^\]]+\]\((?:https?:\/\/|\/)[^)\s]+\)|`[^`]+`|\*\*[^*]+\*\*|\*[^*]+\*)/g;
 
     return text.split(tokenPattern).filter(Boolean).map((part, index) => {
+        const citationMatch = part.match(/^\[\^(\d+)\]$/);
+
+        if (citationMatch) {
+            const referenceId = citationMatch[1];
+
+            return (
+                <sup key={`citation-${referenceId}-${index}`} className="ml-0.5 align-super text-[0.72em] leading-none">
+                    <a
+                        href={`#reference-${referenceId}`}
+                        aria-label={`Reference ${referenceId}`}
+                        className="font-mono font-semibold text-cyan-300 no-underline transition-colors hover:text-cyan-100"
+                    >
+                        [{referenceId}]
+                    </a>
+                </sup>
+            );
+        }
+
         const linkMatch = part.match(/^\[([^\]]+)\]\(((?:https?:\/\/|\/)[^)\s]+)\)$/);
 
         if (linkMatch) {
@@ -343,6 +380,10 @@ function renderInlineMarkdown(text) {
 
         if (part.startsWith("**") && part.endsWith("**")) {
             return <strong key={`strong-${index}`} className="font-semibold text-zinc-100">{part.slice(2, -2)}</strong>;
+        }
+
+        if (part.startsWith("*") && part.endsWith("*")) {
+            return <em key={`emphasis-${index}`}>{part.slice(1, -1)}</em>;
         }
 
         return part;
