@@ -1,0 +1,19 @@
+{
+  "talks": [
+    {
+      "id": "2018-data-science-workshop",
+      "title": "Data Science & Machine Learning Workshop",
+      "date": "2018-11-06",
+      "duration": "3 days",
+      "role": "Workshop instructor",
+      "venue": "Lumbini ICT Campus",
+      "location": "Gaindakot, Nepal",
+      "description": [
+        "Taught Python fundamentals and the data science workflow using NumPy, Pandas, Matplotlib, and scikit-learn.",
+        "Covered linear and logistic regression, support vector machines (SVM), k-nearest neighbors (KNN), and k-means clustering.",
+        "Combined discussions, practical demonstrations, and hands-on coding exercises to help participants apply data science and machine learning concepts."
+      ],
+      "href": ""
+    }
+  ]
+}

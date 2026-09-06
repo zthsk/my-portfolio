@@ -1,0 +1,9 @@
+{
+  "origins": [
+    "https://kshitiztiwari.com",
+    "https://www.kshitiztiwari.com"
+  ],
+  "originsRegex": [
+    "^http://(localhost|127\\.0\\.0\\.1)(:[0-9]+)?$"
+  ]
+}

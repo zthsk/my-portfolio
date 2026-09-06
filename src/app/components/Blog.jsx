@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowLeft, faArrowRight, faCalendarAlt, faClock} from "@fortawesome/free-solid-svg-icons";
+import BlogComments from "./BlogComments";
 
 export function BlogIndex({posts}) {
     return (
@@ -144,6 +145,8 @@ export function BlogArticle({post}) {
                 )}
                 {post.blocks.map((block, index) => renderBlock(block, index))}
             </div>
+
+            <BlogComments key={post.slug} slug={post.slug}/>
         </article>
     );
 }

@@ -1,7 +1,7 @@
 {
   "name": "Kshitiz Tiwari",
   "domain": "kshitiztiwari.com",
-  "email": "ktiwar@uark.edu",
+  "email": "pingkshitiz@gmail.com",
   "location": "Fayetteville, Arkansas",
   "work_place": "University of Arkansas",
   "work_place_url": "https://www.uark.edu",
@@ -14,7 +14,6 @@
     "I am a PhD Candidate in Computer Science at the University of Arkansas, expected to graduate in December 2026. My work sits between AI research and engineering: I build reproducible LLM, NLP, retrieval, and evaluation systems that make model behavior easier to test and trust.",
     "My research focuses on controllable generation, causal NLP, and adversarial robustness. I am seeking AI Engineer, ML Engineer, NLP Engineer, and research-engineering roles where I can translate rigorous experiments into dependable products."
   ],
-  "cv_link": "/cv.pdf",
   "research_interests": [
     "LLM Evaluation",
     "RAG & Retrieval",

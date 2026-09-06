@@ -19,10 +19,10 @@ Compared to the original template, this version includes several changes and add
   - Reorganized the homepage around positioning, credibility, selected work, publications, writing, and contact.
   - Added responsive project case-study routes and connected relevant articles to their systems.
   - Reworked experience and education around ownership, outcomes, and current status.
+  - Added talks and workshops to the Experience page, with event details and teaching highlights.
   - Kept the Markdown-backed blog with a homepage latest-writing preview.
 - **Meta / SEO**
   - Added page-specific metadata, Person structured data, a dynamic sitemap, and a dedicated 1200×630 social card.
-  - Added a generated one-page PDF CV and source script under `scripts/build_cv.py`.
 
 The sections below (data format, how to modify JSON, etc.) are largely preserved from the original template so that users can still follow the same configuration model.
 
@@ -34,8 +34,8 @@ The sections below (data format, how to modify JSON, etc.) are largely preserved
 my-portfolio/
 ├── content/
 │   └── blog/              # Markdown blog posts
-├── data/                  # JSON data for personal info, experience, projects, research, publications, news
-├── public/                # Static assets (CV, images, README screenshots)
+├── data/                  # JSON data for personal info, experience, talks, projects, research, publications, news
+├── public/                # Static assets (images, README screenshots)
 ├── src/
 │   └── app/
 │       ├── components/    # React components for layout and sections
@@ -59,6 +59,14 @@ The template features a clean and modern design, making it easy to customize and
 ![Data Dir](/public/readme/data_dir.png)
 3. After you finished modifying the `.json` files, go to [Vercel](https://vercel.com/) and create a new account if you don't have one. Then, import your repository to Vercel and deploy it. You can find more details on how to deploy your Next.js app on Vercel [here](https://nextjs.org/docs/deployment).
 
+## Security checks
+
+Run `npm run audit:security` to check all dependencies, including build tools, against current npm advisories. Run `npm run test:security` to verify production/development security headers, the Giscus origin allowlist, environment-file ignore rules, and the public directory. These tests do not require a running server. After security changes, also run `npm run lint` and `npm run build`, then check the production preview and blog comments in a browser.
+
+Keep real environment files and credentials out of Git and `public/`. Only sanitized `.env.example` or `.env.*.example` files are allowed by the repository's ignore rules. No secrets are needed for Giscus.
+
+The CSP deliberately permits inline bootstrap scripts for statically generated Next.js pages, but blocks inline HTML event handlers and injected `<base>` elements. This is defense in depth, not a substitute for escaping content. See [the security review](docs/security-review.md) for findings, verification, and remaining limitations.
+
 ## Modify the content
 
 > **Warning:** Please note that if you don't want certain field to appear on your portfolio, please leave that field blank. Do not remove the field!
@@ -78,7 +86,6 @@ To modify your personal information, open the `personalInfo.json` file in the `d
 | `greetings_on_homepage` | String         | The greeting message on the homepage, e.g., "Welcome!".                                                         |
 | `self_description_brief`| String         | A brief self-description, e.g., "PhD Student in Computational Biology".                                         |
 | `self_description_detail`| Array of Strings | A detailed self-description, with each array element as a paragraph.                                            |
-| `cv_link`               | String (URL)   | The link to the person's CV, e.g., "/cv.pdf".                                                                   |
 | `research_interests`    | Array of Strings | A list of research interests, e.g., ["Machine Learning", "Deep Learning", "Computer Vision"].                  |
 | `social_media`          | Dictionary     | A dictionary object containing links to social media profiles, including LinkedIn, GitHub, X (formerly Twitter), Instagram, Facebook, Google Scholar, and ORCID. |
 
@@ -117,6 +124,22 @@ Write the post body with headings, paragraphs, and bullet lists.
 ```
 
 Each published post should include a project-local cover image under `public/images/blog` so the article has a visual preview on the site and in social Open Graph cards.
+
+#### Blog comments
+
+Every article includes a [Giscus](https://giscus.app/) comment section backed by the repository's GitHub Discussions. Readers can view comments without signing in; posting comments or reactions requires GitHub authorization. The widget loads when a reader approaches the end of the article and follows the portfolio's light/dark theme.
+
+The repository and discussion category are configured in `data/comments.json`. This portfolio uses `zthsk/my-portfolio` and its **Announcements** category. The IDs are public configuration values; no API keys or environment secrets are required.
+
+To activate comments, enable Discussions and [install the Giscus GitHub app](https://github.com/apps/giscus) with access to **only this repository**. Enabling Discussions alone does not install the app. For another repository or category, retrieve its IDs from [the Giscus configurator](https://giscus.app/) and update `data/comments.json`.
+
+Each article maps to a separate discussion using its Markdown filename's slug with strict matching. Giscus creates the discussion after the first comment or reaction; the welcome discussion is not reused for every article. Keep filenames stable after comments are posted, or migrate the discussion mapping when renaming a post. Article titles can change independently.
+
+The `giscus:backlink` metadata points to the public article even when a discussion is first opened from a local or preview build. `giscus.json` restricts embedding to the portfolio's production domains and local development; add any exact preview deployment origin you want to test. Giscus reads this file from the discussion repository's default branch, so changes to that allowlist must be pushed there to take effect.
+
+The content security policy permits frames from `https://giscus.app`. The React package is bundled with the portfolio, so an external script permission is not needed. A direct GitHub Discussions link remains available if the embed is blocked or unavailable.
+
+After changing the integration, run `npm run lint` and `npm run build`, then check two different articles, light/dark switching, and a narrow mobile viewport. Verify sign-in and the first comment on the deployed site once the app is installed.
 
 ### Experience
 
@@ -166,6 +189,12 @@ To modify the experience section, open the `experience.json` file in the `data` 
 | `courses`     | Array of Strings | A list of relevant courses taken during the degree program.                                                                      |
 | `other_info`  | Array of Strings | Any additional information or honors related to the degree.                                                                      |
 | `href`        | String (URL)  | A URL link to more information about the education, if available. If no link is provided, this field may be an empty string.     |
+
+### Talks and workshops
+
+The Experience page includes a **Talks & Workshops** section at `/experience#talks`. Edit `data/talks.json` to add or update entries; they are displayed newest first. An empty `talks` array hides the section.
+
+Each entry includes a unique `id`, `title`, ISO `date` (`YYYY-MM-DD`), `duration`, `role`, `venue`, `location`, and a `description` array of concise teaching or presentation highlights. Set `href` to an event page when available, or leave it empty to omit the details link. Dates are displayed in UTC so a single-day date does not shift across time zones.
 
 ### Publications
 

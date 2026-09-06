@@ -2,14 +2,17 @@ const isDevelopment = process.env.NODE_ENV === "development";
 
 const contentSecurityPolicy = [
     "default-src 'self'",
+    "frame-src 'self' https://giscus.app",
+    // Static Next.js pages need inline bootstrap scripts, but never HTML event handlers.
     `script-src 'self' 'unsafe-inline'${isDevelopment ? " 'unsafe-eval'" : ""}`,
+    "script-src-attr 'none'",
     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data: blob:",
     "font-src 'self' data:",
     `connect-src 'self'${isDevelopment ? " ws: wss:" : ""}`,
     "media-src 'self'",
     "object-src 'none'",
-    "base-uri 'self'",
+    "base-uri 'none'",
     "form-action 'self'",
     "frame-ancestors 'none'",
     "worker-src 'self' blob:",

@@ -35,6 +35,9 @@ export async function generateMetadata({params}) {
         alternates: {
             canonical: `/blog/${post.slug}`,
         },
+        other: {
+            "giscus:backlink": `https://kshitiztiwari.com/blog/${post.slug}`,
+        },
         openGraph: {
             title: post.title,
             description: post.excerpt,

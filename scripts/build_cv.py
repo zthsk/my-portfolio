@@ -208,7 +208,7 @@ def build_cv():
     ]
     contact = Paragraph(
         "Fayetteville, AR<br/>"
-        f"{link('ktiwar@uark.edu', 'mailto:ktiwar@uark.edu')} | "
+        f"{link('pingkshitiz@gmail.com', 'mailto:pingkshitiz@gmail.com')} | "
         f"{link('LinkedIn', 'https://www.linkedin.com/in/zthsk/')} | "
         f"{link('GitHub', 'https://github.com/zthsk')}<br/>"
         f"{link('kshitiztiwari.com', 'https://kshitiztiwari.com')}",
@@ -257,7 +257,7 @@ def build_cv():
         [[
             Paragraph("<b>Ph.D., Computer Science</b><br/><font color='#4B5563'>University of Arkansas | Expected Dec 2026</font>", small_style),
             Paragraph("<b>M.S., Computer Science</b><br/><font color='#4B5563'>University of Arkansas | Dec 2024</font>", small_style),
-            Paragraph("<b>B.Sc., CS &amp; IT</b><br/><font color='#4B5563'>Tribhuvan University | 2019</font>", small_style),
+            Paragraph("<b>B.Sc., CS &amp; IT</b><br/><font color='#4B5563'>Tribhuvan University | 2018</font>", small_style),
         ]],
         colWidths=[2.58 * inch, 2.48 * inch, 2.4 * inch],
     )

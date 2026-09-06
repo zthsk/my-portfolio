@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faArrowRight, faEnvelope, faFileArrowDown} from "@fortawesome/free-solid-svg-icons";
+import {faArrowRight, faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import personalInfo from "../../../data/personalInfo.json";
 import SocialMedia from "./SocialMedia";
 
@@ -41,14 +41,6 @@ export default function NameCard() {
                         View selected work
                         <FontAwesomeIcon icon={faArrowRight} className="text-xs"/>
                     </Link>
-                    <a
-                        href={personalInfo.cv_link}
-                        download
-                        className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-zinc-700 bg-zinc-950/70 px-4 py-2.5 text-sm font-medium text-zinc-100 transition-colors hover:border-cyan-300 hover:text-cyan-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
-                    >
-                        <FontAwesomeIcon icon={faFileArrowDown} className="text-sm"/>
-                        Download CV
-                    </a>
                     <a
                         href={`mailto:${personalInfo.email}`}
                         className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-zinc-800 px-4 py-2.5 text-sm font-medium text-zinc-300 transition-colors hover:border-zinc-600 hover:text-zinc-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
