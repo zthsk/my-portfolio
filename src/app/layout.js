@@ -2,6 +2,7 @@ import {config} from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "./globals.css";
 import personalInfo from "../../data/personalInfo.json";
+import GoatCounterAnalytics from "./components/GoatCounterAnalytics";
 
 config.autoAddCss = false;
 
@@ -62,6 +63,7 @@ export default function RootLayout({children}) {
                     Skip to content
                 </a>
                 {children}
+                <GoatCounterAnalytics/>
             </body>
         </html>
     );

@@ -63,3 +63,21 @@ npm run build
 ```
 
 Start the production preview and verify the homepage, an article's comment section, and the response headers. Confirm that the theme toggle works, comments remain usable, and private/config paths return 404. Recheck the same behavior after deployment.
+
+## GoatCounter integration follow-up — September 6, 2026
+
+The subsequent analytics integration adds two narrowly scoped CSP exceptions: the script `https://gc.zgo.at/count.js` and collection endpoint `https://kshtz.goatcounter.com/count`. Existing image, iframe, inline-event-handler, base-URL, and other security restrictions are unchanged. This introduces a trusted third-party script on the production portfolio; the provider's infrastructure and script supply chain were not audited.
+
+Analytics are restricted to production builds on the two exact portfolio origins. Do Not Track and Global Privacy Control disable script loading, and the provider's own opt-out/filter remains in use. Page paths exclude query strings and fragments, referrers are reduced to their HTTP(S) origin, and collection requests omit cookies and the HTTP referrer. The provider's automatically appended query field is removed before sending, so URL parameters such as Giscus sign-in values are not included. The integration does not retry blocked requests or add a public counter. No dependency was added.
+
+Verification completed before committing the integration:
+
+- Six analytics tests and the six updated security tests passed. Lint and the production build passed; all 19 generated pages remained static.
+- A fresh full-tree dependency audit reported zero known vulnerabilities.
+- Browser checks used the actual provider script with production-origin requests served from the local build. Every analytics submission was intercepted; no synthetic visits or test sign-in values were sent to the account.
+- The initial view, client-side navigation, article titles, and back/forward visits were counted once each. Theme/query/fragment changes did not add visits. Navigation during delayed script loading retained the visited paths.
+- Localhost, preview domains, Do Not Track, Global Privacy Control, GoatCounter opt-out, blocked scripts, and restricted storage all sent no visits while leaving navigation and theme switching functional.
+- Collection requests used the intended endpoint, contained no raw query data, and omitted cookies and the HTTP referrer. The production CSP permitted the intended requests without accidental violations.
+- The existing 13-route security browser checks and blog-comment regressions passed again, including a successful real Giscus widget request. No comment was posted or authenticated flow exercised.
+
+These checks verify the integration, not receipt of a real visitor in the account dashboard. That still requires a deployed production page and an eligible live visit. Repeat `npm run test:analytics` alongside the security checks after future changes.

@@ -67,6 +67,18 @@ Keep real environment files and credentials out of Git and `public/`. Only sanit
 
 The CSP deliberately permits inline bootstrap scripts for statically generated Next.js pages, but blocks inline HTML event handlers and injected `<base>` elements. This is defense in depth, not a substitute for escaping content. See [the security review](docs/security-review.md) for findings, verification, and remaining limitations.
 
+## Visitor analytics
+
+The portfolio uses [GoatCounter](https://www.goatcounter.com/) with the account endpoint `https://kshtz.goatcounter.com/count`. Analytics run in the background; there is **no public visitor counter** or change to the page layout. View statistics in the [GoatCounter dashboard](https://kshtz.goatcounter.com/). The endpoint is public configuration, not an API key.
+
+`src/app/components/GoatCounterAnalytics.jsx` loads the provider once through Next.js and records the initial page plus subsequent pathname changes, including browser back/forward navigation. Theme changes, query-string changes, and in-page anchors do not add page views. The provider's automatic counting and click events are disabled to avoid double counting. If its script loads slowly, up to 20 pending page views are retained in memory.
+
+Tracking is enabled only in production builds served from `https://kshitiztiwari.com` or `https://www.kshitiztiwari.com`. Localhost and preview deployments never load the analytics script. Do Not Track and Global Privacy Control also prevent it from loading; GoatCounter's own filtering and `skipgc` opt-out remain respected. A blocked script or request does not prevent the portfolio from working and is not retried.
+
+The integration sends the page pathname and title, an origin-only referrer, and GoatCounter's standard screen-width/bot fields. Query strings and fragments are removed, including potential Giscus sign-in parameters. Collection requests omit cookies and the HTTP referrer. GoatCounter's `url()` API is used instead of `count()` because the standard script adds `location.search` as a separate `q` parameter even when an explicit pathname is provided. The content security policy allows only `https://gc.zgo.at/count.js` for the provider script and the exact account `/count` endpoint for collection; no new image or iframe permissions are added.
+
+Run `npm run test:analytics`, `npm run test:security`, `npm run lint`, and `npm run build` after changes. After deployment, visit the live portfolio in a normal browser, navigate to another page, then check the dashboard. A local preview intentionally leaves the dashboard unchanged. If nothing arrives from a live visit, check browser privacy settings, an existing GoatCounter opt-out, and whether a blocker is filtering `gc.zgo.at` or `goatcounter.com`. Do not enable localhost tracking to test production statistics. See GoatCounter's [SPA integration](https://www.goatcounter.com/help/spa), [JavaScript API](https://www.goatcounter.com/help/js), and [development/opt-out guidance](https://www.goatcounter.com/help/skip-dev).
+
 ## Modify the content
 
 > **Warning:** Please note that if you don't want certain field to appear on your portfolio, please leave that field blank. Do not remove the field!

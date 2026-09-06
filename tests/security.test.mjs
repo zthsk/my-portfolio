@@ -4,6 +4,7 @@ import {readFileSync, readdirSync} from "node:fs";
 import {fileURLToPath} from "node:url";
 import path from "node:path";
 import test from "node:test";
+import {GOATCOUNTER_ENDPOINT, GOATCOUNTER_SCRIPT_URL} from "../src/lib/analytics.mjs";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 const configUrl = new URL("../next.config.mjs", import.meta.url).href;
@@ -40,7 +41,9 @@ test("production blocks inline event handlers, eval, plugins, and injected base 
     assert.deepEqual(directives.get("object-src"), ["'none'"]);
     assert.deepEqual(directives.get("base-uri"), ["'none'"]);
     assert.ok(!directives.get("script-src").includes("'unsafe-eval'"));
-    assert.deepEqual(directives.get("connect-src"), ["'self'"]);
+    assert.deepEqual(directives.get("script-src"), ["'self'", "'unsafe-inline'", GOATCOUNTER_SCRIPT_URL]);
+    assert.deepEqual(directives.get("connect-src"), ["'self'", GOATCOUNTER_ENDPOINT]);
+    assert.deepEqual(directives.get("img-src"), ["'self'", "data:", "blob:"]);
     assert.equal(headers.get("x-content-type-options"), "nosniff");
 });
 
@@ -62,7 +65,7 @@ test("anti-framing and outbound restrictions retain the Giscus exception", () =>
 test("development keeps only the additional script and connection permissions it needs", () => {
     const {directives} = readSecurityConfig("development");
     assert.ok(directives.get("script-src").includes("'unsafe-eval'"));
-    assert.deepEqual(directives.get("connect-src"), ["'self'", "ws:", "wss:"]);
+    assert.deepEqual(directives.get("connect-src"), ["'self'", GOATCOUNTER_ENDPOINT, "ws:", "wss:"]);
     assert.deepEqual(directives.get("script-src-attr"), ["'none'"]);
     assert.deepEqual(directives.get("base-uri"), ["'none'"]);
 });
